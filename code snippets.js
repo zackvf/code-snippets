@@ -83,3 +83,13 @@ function Stopwatch() {
         get: function() { return duration; }
     });
 }
+
+
+// mimic css pesticide extension (basic functionality)
+function highlightDivs() {
+    const alldivs = document.getElementsByTagName("*");
+    for (let div in alldivs) {
+        alldivs[div].style.border = "thin solid blue";
+        console.log(alldivs[div]);
+    }
+}
