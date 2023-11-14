@@ -94,17 +94,18 @@ function highlightDivs() {
     }
 }
 
+
 // older version of Node file system create/read/update/delete operations
 const fs = require('fs');
 
-// // Create a new file and write to it
-fs.writeFile('seeya.txt', 'qwer', err => {
+// Create a new file and write to it
+fs.writeFile('./hello.txt', 'qwer', err => {
     if (err) {
         console.log(err);
     }
 })
 
-// // Read an existing file
+// Read an existing file
 fs.readFile('./hello.txt', (err, data) => {
  if (err) {
      console.log('err');
@@ -114,15 +115,15 @@ fs.readFile('./hello.txt', (err, data) => {
 const file = fs.readFileSync('./hello.txt');
 console.log('Sync', file.toString());
 
-// // Append an existing file
+// Append an existing file
 fs.appendFile('./hello.txt', ' 123', err => {
  if (err) {
      console.log(err);
  }
 })
 
-// // Delete an existing file
-fs.unlink('./seeya.txt', err => {
+// Delete an existing file
+fs.unlink('./hello.txt', err => {
  if (err) {
      console.log(err);
  }
