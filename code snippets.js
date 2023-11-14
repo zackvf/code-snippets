@@ -93,3 +93,38 @@ function highlightDivs() {
         console.log(alldivs[div]);
     }
 }
+
+// older version of Node file system create/read/update/delete operations
+const fs = require('fs');
+
+// // Create a new file and write to it
+fs.writeFile('seeya.txt', 'qwer', err => {
+    if (err) {
+        console.log(err);
+    }
+})
+
+// // Read an existing file
+fs.readFile('./hello.txt', (err, data) => {
+ if (err) {
+     console.log('err');
+ }
+ console.log('Async', data.toString('utf8'));
+})
+const file = fs.readFileSync('./hello.txt');
+console.log('Sync', file.toString());
+
+// // Append an existing file
+fs.appendFile('./hello.txt', ' 123', err => {
+ if (err) {
+     console.log(err);
+ }
+})
+
+// // Delete an existing file
+fs.unlink('./seeya.txt', err => {
+ if (err) {
+     console.log(err);
+ }
+ console.log('File has been deleted.');
+})
