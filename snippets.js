@@ -129,3 +129,10 @@ fs.unlink('./hello.txt', err => {
  }
  console.log('File has been deleted.');
 })
+
+
+// basic recursion example - adding all array elements together, where arr is the array of numbers passed and n is the array length to capture a desired result
+function sum(arr, n) {
+    if (n <= 0) return 0;
+    return sum(arr, n - 1) + arr[n - 1];
+}
