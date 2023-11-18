@@ -99,3 +99,21 @@ const createPerson = (name, age, gender) => {
 };
 
 
+// In ES5, an object can be created by defining a constructor function and using the new keyword to instantiate the object.
+// In ES6, a class declaration has a constructor method that is invoked with the new keyword. If the constructor method is not explicitly defined, then it is implicitly defined with no arguments.
+// explicit constructor - identified by the param passed to the new Vegetable method call
+class Vegetable {
+  constructor(name) {
+    this.name = name;
+  }
+}
+
+const carrot = new Vegetable('carrot');
+console.log(carrot.name); // expected output: 'carrot'
+
+// implicit constructor - no explicitly defined constructor method
+class Vegetable {
+  console.log("This is a vegetable class.")
+}
+
+
