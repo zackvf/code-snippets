@@ -117,3 +117,29 @@ class Vegetable {
 }
 
 
+// using getters and setters to control object prop access
+// You can obtain values from an object and set the value of a property within an object.
+// These are classically called getters and setters.
+// Getter functions are meant to simply return (get) the value of an object's private variable to the user without the user directly accessing the private variable.
+// Setter functions are meant to modify (set) the value of an object's private variable based on the value passed into the setter function. This change could involve calculations, or even overwriting the previous value completely.
+// This is the power of a getter and a setter. You are creating an API for another user, who can get the correct result regardless of which one you track.
+// In other words, you are abstracting implementation details from the user.
+// thermostat class example
+class Thermostat {
+  constructor(temp) {
+    this._temp = temp;
+  }
+  get temperature() {
+    return 5/9 * (this._temp - 32);
+  }
+  set temperature(tempInCelsius) {
+    this._temp = tempInCelsius * 9.0 / 5 + 32;
+  }
+}
+
+const thermos = new Thermostat(76); // instantiate a new thermostat object with 76 F
+let temp = thermos.temperature; // expected output: 24.44 in Celsius
+thermos.temperature = 26;
+temp = thermos.temperature; // expected output: 26 in Celsius
+
+
