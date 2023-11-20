@@ -129,11 +129,11 @@ class Thermostat {
   constructor(temp) {
     this._temp = temp;
   }
-  get temperature() {
+  get temperature() { // returns a celsius temp value
     return 5/9 * (this._temp - 32);
   }
-  set temperature(tempInCelsius) {
-    this._temp = tempInCelsius * 9.0 / 5 + 32;
+  set temperature(newTemp) { // set a new fahrenheit temp value
+    this._temp = newTemp * 9.0 / 5 + 32;
   }
 }
 
@@ -141,5 +141,24 @@ const thermos = new Thermostat(76); // instantiate a new thermostat object with 
 let temp = thermos.temperature; // expected output: 24.44 in Celsius
 thermos.temperature = 26;
 temp = thermos.temperature; // expected output: 26 in Celsius
+
+
+// easily import all contents of a module as a new object in the file using the contents
+// ex. 1 - exporting the functions needed in another file/module
+const uppercaseString = string => {
+  return string.toUpperCase();
+}
+
+const lowercaseString = string => {
+  return string.toLowerCase();
+}
+
+export { uppercaseString, lowercaseString };
+
+// ex. 2 - importing the functions all at once into the 'stringFunctions' object
+import * as stringFunctions from "./string_functions.js"; // in this case, it's the same as saying import { uppercaseString, lowercaseString } from "./string_functions.js";
+
+stringFunctions.uppercaseString("hello");
+stringFunctions.lowercaseString("WORLD!");
 
 
