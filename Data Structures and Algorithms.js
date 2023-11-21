@@ -230,6 +230,6 @@ let reCriminals = /C+/g; // specifically looking for one or more instances of ca
 // \d - shortcut for digits, same as writing [0-9], which looks for a single character of any number between zero and nine
 // ex. using \d
 let movieName = "2001: A Space Odyssey";
-let numRegex = /\d/g; // Change this line
+let numRegex = /\d/g;
 let result = movieName.match(numRegex).length; // expected output: 4
 let result = movieName.match(numRegex) // expected output: ["2", "0", "0", "1"]
