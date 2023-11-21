@@ -259,3 +259,16 @@ let hello = "   Hello, World!  ";
 let wsRegex = /^\s+|\s+$/g;
 let result = hello.replace(wsRegex, "")
 
+
+// debugging
+// reference errors in the console typically point to misspelled variables/functions, where a "not defined" message can help isolate where a program is trying to refer to a non-existent object
+// syntax errors typically point to missing closing parantheses/brackets/curly braces/quotation marks, resulting in "unexpected token, expected "symbol"" console messages
+// falsy values: false, 0, "", NaN, undefined, null
+// runtime errors can occur when the arguments are supplied to functions in the incorrect order, such as when using different types of arguments like an array and an integer
+// OBOE - off by one errors - can occur when attempting to target an index of a string or array that shouldn't be targetted, where the message "index out of range" could occur when trying to access an index that's equal to the length of an array (or just undefined will be printed to the console)
+
+
+// data structures and algorithms
+// 1d array - one level of elements, no nested arrays or objects within any of the elements
+// 2d array - two levels of elements with nested arrays or objects
+array.splice(index to start removing elements, number of elements to remove, remaining arguments to be inserted starting at the specified index); // the number of elements to remove is inclusive, so the starting point is removed from the original array
