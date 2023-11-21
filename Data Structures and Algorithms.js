@@ -169,3 +169,58 @@ export default function subtract(x, y) {
 }
 
 
+// promises - When the task completes, you either fulfill your promise or fail to do so. Promise is a constructor function, so you need to use the new keyword to create one. It takes a function, as its argument, with two parameters - resolve and reject. These are methods used to determine the outcome of the promise
+// A promise has three states: pending, fulfilled, and rejected. The resolve and reject parameters given to the promise argument are used to do complete the promise and exit a pending state. resolve is used when you want your promise to succeed, and reject is used when you want it to fail. These are methods that take an argument
+const makeServerRequest = new Promise((resolve, reject) => {
+  let responseFromServer;    
+  if(responseFromServer) {
+    resolve("Response received from server.");
+  } else {  
+    reject("No response received from server.");
+  }
+});
+
+// When you make a server request it takes some amount of time, and after it completes you usually want to do something with the response from the server. This can be achieved by using the then method. The then method is executed immediately after your promise is fulfilled with resolve
+makeServerRequest.then(result => {
+  console.log(result);
+});
+
+// catch is the method used when your promise has been rejected. It is executed immediately after a promise's reject method is called
+makeServerRequest.catch(error => {
+  console.log(error);
+});
+
+
+// regex cheatsheet
+/specific text/ // search for a specific word/text block
+/specific Text/i // i is case insensitivity
+/specific text/g // g is repeated instances of the text value
+/spec./ // . is wild card for getting any characters before/after the text value
+text.test(specific text) // test returns true or false if the text value appears in the string being searched on
+text.match(specific text) // match returns an array with the extracted text value matches
+/b[aiu]g/ // this example would match big, bag, and bug, but not bog - character classes only match text that fits the class
+// ex. of finding all the vowels in a sentence
+let quoteSample = "Beware of bugs in the above code; I have only proved it correct, not tried it.";
+let vowelRegex = /[aeiou]/gi;
+let result = quoteSample.match(vowelRegex);
+console.log(result); // returns an array
+/[a-e]at/ // hyphen defines range of characters to match, so this could return bat and cat but not hat or mat
+// ex. of matching all alphabet letters in a string, which creates an array where each letter is placed in numerical order and the period is ignored
+let quoteSample = "The quick brown fox jumps over the lazy dog.";
+let alphabetRegex = /[a-z]/gi;
+let result = quoteSample.match(alphabetRegex);
+/[a-z0-9]/ // match ranges of letters and numbers within a string
+/[^aeiou]/ // ^caret negates characters, so this would match all non-vowel characters in a string
+// + matches characters that occur one or more times, where two or more of the same character would be considered a single instance of it
+// ex. of capturing when s appears one or more times in mississippi
+let testString = "Mississippi";
+let testRegex = /s+/g;
+let result = testString.match(testRegex); // expected output: ["ss", "ss"]
+// * matches zero or more characters
+// In regular expressions, a greedy match finds the longest possible part of a string that fits the regex pattern and returns it as a match. The alternative is called a lazy match, which finds the smallest possible part of the string that satisfies the regex pattern.
+// ex. of lazy matching
+let text = "<h1>Winter is coming</h1>";
+let myRegex = /<.*?>/;
+let result = text.match(myRegex); // expected output: <h1>
+// find one or more criminals in a hunt
+let reCriminals = /C+/g; // specifically looking for one or more instances of capital c among alphanumeric strings
