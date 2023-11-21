@@ -210,7 +210,7 @@ let quoteSample = "The quick brown fox jumps over the lazy dog.";
 let alphabetRegex = /[a-z]/gi;
 let result = quoteSample.match(alphabetRegex);
 /[a-z0-9]/ // match ranges of letters and numbers within a string
-/[^aeiou]/ // ^caret negates characters, so this would match all non-vowel characters in a string
+/[^aeiou]/ // ^caret negates characters, so this would match all non-vowel characters in a string. Outside of a character set, the caret is used to search for patterns at the beginning of strings.
 // + matches characters that occur one or more times, where two or more of the same character would be considered a single instance of it
 // ex. of capturing when s appears one or more times in mississippi
 let testString = "Mississippi";
@@ -224,3 +224,12 @@ let myRegex = /<.*?>/;
 let result = text.match(myRegex); // expected output: <h1>
 // find one or more criminals in a hunt
 let reCriminals = /C+/g; // specifically looking for one or more instances of capital c among alphanumeric strings
+// $ searches for the specified characters at the end of a regex
+// \w - shortcut to match all upper and lowercase letters and numbers, including _, same as writing [A-Za-z0-9_]
+// \W - opposite of \w, same as writing [^A-Za-z0-9_]
+// \d - shortcut for digits, same as writing [0-9], which looks for a single character of any number between zero and nine
+// ex. using \d
+let movieName = "2001: A Space Odyssey";
+let numRegex = /\d/g; // Change this line
+let result = movieName.match(numRegex).length; // expected output: 4
+let result = movieName.match(numRegex) // expected output: ["2", "0", "0", "1"]
