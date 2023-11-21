@@ -191,7 +191,7 @@ makeServerRequest.catch(error => {
 });
 
 
-// regex cheatsheet
+// regex
 /specific text/ // search for a specific word/text block
 /specific Text/i // i is case insensitivity
 /specific text/g // g is repeated instances of the text value
@@ -224,7 +224,7 @@ let myRegex = /<.*?>/;
 let result = text.match(myRegex); // expected output: <h1>
 // find one or more criminals in a hunt
 let reCriminals = /C+/g; // specifically looking for one or more instances of capital c among alphanumeric strings
-// $ searches for the specified characters at the end of a regex
+// $ searches for the specified characters at the end of a string
 // \w - shortcut to match all upper and lowercase letters and numbers, including _, same as writing [A-Za-z0-9_]
 // \W - opposite of \w, same as writing [^A-Za-z0-9_]
 // \d - shortcut for digits, same as writing [0-9], which looks for a single character of any number between zero and nine
@@ -233,3 +233,29 @@ let movieName = "2001: A Space Odyssey";
 let numRegex = /\d/g;
 let result = movieName.match(numRegex).length; // expected output: 4
 let result = movieName.match(numRegex) // expected output: ["2", "0", "0", "1"]
+// \D - opposite of \d, same as writing [^0-9], which looks for a single character that is not a number between zero and nine.
+// restrict possible usernames solution -
+let username = "JackOfAllTrades";
+let userCheck = /^[a-z][a-z]+\d*$|^[a-z]\d\d+$/i;
+let result = userCheck.test(username);
+  // userCheck variable explained:
+  // ^ - start of input
+  // [a-z] - first character is a letter
+  // [a-z]+ - following characters are letters
+  // \d*$ - input ends with 0 or more digits
+  // | - or
+  // ^[a-z] - first character is a letter
+  // \d\d+ - following characters are 2 or more digits
+  // $ - end of input
+// \s - shortcut to match whitespace characters, same as writing [ \r\t\f\n\v], being carriage return, tab, form feed, and new line
+// \S - opposite of \s, same as writing [^ \r\t\f\n\v], which matches all non-whitespace characters
+// {} - quantity specifiers, can put two numbers inside them to specify the range of instances a character appears, can also specify just the lower number with no upper limit and vice versa, like {3,} (i.e. at least 3) and {,6} (i.e. no more than 6), can also specify exact number of character matches with a single number, like {3} (i.e. only 3)
+// ? - checks for zero or one instances of the character directly preceding it, i.e. the preceding character is optional to match
+// lookaheads - positive (?=element) checks that the element in the search pattern is there but won't match it, negative (?!element) checks that the element in the search pattern is not there and if not then return the rest of the pattern
+// positive and negative lookahead solution (Use lookaheads in the pwRegex to match passwords that are greater than 5 characters long, and have two consecutive digits) -
+pwRegex = /(?=\w)(?=\D\d\d+)/
+// trim whitespace before and after a string without .trim()
+let hello = "   Hello, World!  ";
+let wsRegex = /^\s+|\s+$/g;
+let result = hello.replace(wsRegex, "")
+
