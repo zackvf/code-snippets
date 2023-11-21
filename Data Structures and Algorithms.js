@@ -269,6 +269,6 @@ let result = hello.replace(wsRegex, "")
 
 
 // data structures and algorithms
-// 1d array - one level of elements, no nested arrays or objects within any of the elements
-// 2d array - two levels of elements with nested arrays or objects
+// 1d/one-dimesional array - one level of elements, no nested arrays or objects within any of the elements
+// multi-dimensional array - two or more levels of elements with nested arrays and/or objects
 array.splice(index to start removing elements, number of elements to remove, remaining arguments to be inserted starting at the specified index); // the number of elements to remove is inclusive, so the starting point is removed from the original array
