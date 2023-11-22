@@ -272,4 +272,4 @@ let result = hello.replace(wsRegex, "")
 // 1d/one-dimesional array - one level of elements, no nested arrays or objects within any of the elements
 // multi-dimensional array - two or more levels of elements with nested arrays and/or objects
 array.splice(index to start removing elements, number of elements to remove, remaining arguments to be inserted starting at the specified index); // the number of elements to remove is inclusive, so the starting point is removed from the original array
-array.slice() // shallow copies/extracts a certain number of elements from an existing array and puts those elements into a new array
+array.slice(index to begin extraction, index to stop extraction); // shallow copies/extracts a certain number of elements from an existing array and puts those elements into a new array, and index to stop extraction is non-inclusive (set the stop index one element ahead to capture all desired elements)
