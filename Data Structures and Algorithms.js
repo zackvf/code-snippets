@@ -273,3 +273,41 @@ let result = hello.replace(wsRegex, "")
 // multi-dimensional array - two or more levels of elements with nested arrays and/or objects
 array.splice(index to start removing elements, number of elements to remove, remaining arguments to be inserted starting at the specified index); // the number of elements to remove is inclusive, so the starting point is removed from the original array
 array.slice(index to begin extraction, index to stop extraction); // shallow copies/extracts a certain number of elements from an existing array and puts those elements into a new array, and index to stop extraction is non-inclusive (set the stop index one element ahead to capture all desired elements)
+// copying an array using the spread operator - arr is the array of elements you pass the function and num is the number of times the array should be copied
+function copyArray(arr, num) {
+  let newArr = [];
+  while (num >= 1) {
+    newArr.push([...arr]);
+    num--;
+  }
+  return newArr;
+}
+console.log(copyArray([el1, el2, el3], 3)); // expected output: [ [el1, el2, el3], [el1, el2, el3], [el1, el2, el3] ]
+// check for the presense of an element in an array
+function arrayChecker(arr, elem) {
+  if (arr.indexOf(elem) !== -1) {
+    return true;
+  } 
+  return false;
+}
+// JavaScript offers several built in methods that each iterate over arrays in slightly different ways to achieve different results (such as every(), forEach(), map(), etc.), however the technique which is most flexible and offers us the greatest amount of control is a simple for loop.
+// loop through an array of arrays to find ones that match the passed element, and only push the ones where the element is not found (filtering algorithm)
+function filteredArray(arr, elem) {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].indexOf(elem) == -1) {
+      newArr.push(arr[i]);
+    }
+  }
+  return newArr;
+}
+console.log(filteredArray([[3, 2, 3], [1, 6, 3], [3, 13, 26], [19, 3, 9]], 3)); // expected output: [] - all of the passed subarrays contain the element so all of them would get filtered out
+// ex. of five levels of depth in an array of arrays
+let nestedArray = [
+  ['unshift', false, 1, 2, 3, 'complex', 'nested'], 
+  [['loop', 'shift', 6, 7, 1000, 'deep'], // 3 levels deep
+    [['concat', false, true, 'deeper'], // 4 levels deep
+      [['mutate', 1327.98, 'splice', 'slice', 'push'], 
+        ['iterate', 1.3849, 7, '8.4876', 'arbitrary', 'deepest']]]] // 5 levels deep
+];
+
