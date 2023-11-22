@@ -310,4 +310,47 @@ let nestedArray = [
       [['mutate', 1327.98, 'splice', 'slice', 'push'], 
         ['iterate', 1.3849, 7, '8.4876', 'arbitrary', 'deepest']]]] // 5 levels deep
 ];
+// return an array of just an object's properties
+function arrayOfProps(obj) {
+  return Object.keys(obj); // returns an array
+}
 
+
+// algorithms
+// convert celsius temperature value to fahrenheit and vice versa
+function convertCtoF(celsius) {
+  let fahrenheit = celsius * 9/5 + 32;
+  return fahrenheit;
+}
+function convertFtoC(fahrenheit) {
+  let celsius = fahrenheit - 32 * 5/9;
+  return celsius;
+}
+// reverse a string using a for loop
+function reverseString(str) {
+  let newStr = "";
+  for (let i = str.length - 1; i >= 0; i--) {
+    // console.log(str[i]);
+    newStr += str[i];
+  }
+  return newStr;
+}
+// return the factorial of the provided integer, where the integer is greater than or equal to zero - this solution uses "head recursion" where all evaluation calcs are stored on the stack until the base case is reached
+function factorialize(num) {
+  if (num <= 0) return 1;
+  return factorialize(num - 1) * num; // more elegant to say num * factorialize(num - 1)
+}
+factorialize(5); // expected output: 120
+// factorialize function using "tail recursion" for optimized stack performace/memory usage
+function factorialize(num, factorial = 1) {
+  if (num <= 0) return factorial;
+  return factorialize(num - 1, factorial * num); // more elegant to say num * factorialize(num - 1)
+}
+// factorialize function using a for loop
+function factorialize(num) {
+  let product = 1;
+  for (let i = 2; i <= num; i++) {
+    product *= i;
+  }
+  return product;
+}
