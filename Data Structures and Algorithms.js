@@ -271,6 +271,11 @@ let result = hello.replace(wsRegex, "")
 // data structures and algorithms
 // 1d/one-dimesional array - one level of elements, no nested arrays or objects within any of the elements
 // multi-dimensional array - two or more levels of elements with nested arrays and/or objects
+array.push(); // push an element/object to the end of the list/array
+array.pop(); // delete an element from the end of an array
+array.unshift(); // add an element to the beginning of an array
+array.shift(); // remove an element from the beginning of an array
+array.toString(); // converts an array to a comma-separated string of the array's values
 array.splice(index to start removing elements, number of elements to remove, remaining arguments to be inserted starting at the specified index); // the number of elements to remove is inclusive, so the starting point is removed from the original array
 array.slice(index to begin extraction, index to stop extraction); // shallow copies/extracts a certain number of elements from an existing array and puts those elements into a new array, and index to stop extraction is non-inclusive (set the stop index one element ahead to capture all desired elements)
 // copying an array using the spread operator - arr is the array of elements you pass the function and num is the number of times the array should be copied
