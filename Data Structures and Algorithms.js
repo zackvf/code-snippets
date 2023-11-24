@@ -428,3 +428,7 @@ function findElement(arr, func) {
   }
   return undefined;
 }
+// check if a user-passed value is a boolean primitive (true/false)
+function isBool(value) {
+  return bool === true || bool === false ? true : false;
+}
