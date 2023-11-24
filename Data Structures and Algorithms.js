@@ -359,3 +359,15 @@ function factorialize(num) {
   }
   return product;
 }
+// find the longest word in a string
+function findLongestWordLength(str) {
+  let wordsArr = str.split(' ');
+  let longestWord = 0;
+   for (const word in wordsArr) { // can also be written as for (let i = 0; i < wordsArr.length; i++)
+     if (wordsArr[word].length > longestWord) { // can also be written as if (wordsArr[i].length > longestWord)
+       longestWord = wordsArr[word].length; // can also be written as longestword = wordsArr[i].length
+     }
+  }
+  return longestWord;
+}
+// return largest number among nested arrays
