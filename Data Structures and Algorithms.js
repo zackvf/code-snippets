@@ -473,3 +473,12 @@ function truthyFinder(arr) {
   }
   return newArr;
 }
+// return the lowest index number a which a value should be inserted into an array after the array's been sorted
+function getIndexToIns(arr, num) {
+  arr.sort((a, b) => a - b);
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] >= num) return i;
+  }
+  return arr.length;
+}
+// 
