@@ -463,4 +463,13 @@ function arraySpicer(arr1, arr2, n) {
     }
   return newArr2;
 }
-// 
+// return an array that only contains truthy values from a user-passed array
+function truthyFinder(arr) {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i]) { // checks if the element at the array's index is true
+      newArr.push(arr[i]);
+    }
+  }
+  return newArr;
+}
