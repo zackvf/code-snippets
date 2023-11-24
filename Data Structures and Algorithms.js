@@ -370,4 +370,18 @@ function findLongestWordLength(str) {
   }
   return longestWord;
 }
-// return largest number among nested arrays
+// return largest number among nested arrays - procedurally
+function largestOfFour(arr) {
+  const finalList = [];
+  for (let i = 0; i < arr.length; i++) {
+    let largestNumber = arr[i][0];
+    for (let j = 1; j < arr[i].length; j++) {
+      if (arr[i][j] > largestNumber) {
+        largestNumber = arr[i][j];
+      }
+    }
+    finalList[i] = largestNumber;
+  }
+
+  return finalList;
+}
