@@ -385,3 +385,7 @@ function largestOfFour(arr) {
 
   return finalList;
 }
+// check if a string ends with the given target string - declartively
+function confirmEnding(str, target) {
+  return str.slice(str.length - target.length) === target;
+}
