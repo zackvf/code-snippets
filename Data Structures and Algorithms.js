@@ -432,3 +432,35 @@ function findElement(arr, func) {
 function isBool(value) {
   return bool === true || bool === false ? true : false;
 }
+// bool checker alternate version
+function isBool(value) {
+  return typeof value === "boolean";
+}
+// capitalize the first letter in each word in a string to achieve 'title case'
+function titleCase(str) {
+  const strArr = str.split(" ");
+  let newTitle = [];
+  for (let letter in strArr) {
+    newTitle[letter] = strArr[letter][0].toUpperCase() + strArr[letter].slice(1).toLowerCase();
+  }
+  return newTitle.join(" ");
+}
+// alternate version of title case function
+function titleCase(str) {
+  return str
+    .toLowerCase()
+    .split(" ")
+    .map(val => val.replace(val.charAt(0), val.charAt(0).toUpperCase()))
+    .join(" ");
+}
+// copy each element of one array into a second array, in order, starting at a user-passed index of the second array (without mutating the original arrays)
+function arraySpicer(arr1, arr2, n) {
+  let newArr2 = arr2.slice();
+  for (let i = 0; i < arr1.length; i++) {
+      newArr2.splice(n, 0, arr1[i]);
+      n++;
+      // console.log(newArr2);
+    }
+  return newArr2;
+}
+// 
