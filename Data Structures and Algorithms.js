@@ -389,3 +389,42 @@ function largestOfFour(arr) {
 function confirmEnding(str, target) {
   return str.slice(str.length - target.length) === target;
 }
+// repeat a given string n times
+// for loop version
+function repeatString(str, num) {
+  let newStr = "";
+  for (let i = 0; i < num; i++) {
+    newStr += str;
+  }
+  return newStr;
+}
+// recursion version
+function repeatString(str, num) {
+  if (num < 1) {
+    return "";
+  } else {
+    return str + repeatString(str, num - 1);
+  }
+}
+// alternate recursion version
+function repeatString(str, num) {
+  return num > 0 ? str + repeatString(str, num - 1) : '';
+}
+// truncate a string if it's longer than the user-supplied max string length
+function truncateString(str, num) {
+  if (str.length > num) {
+    return str.slice(0, num) + "...";
+  }
+  return str;
+}
+// look through an array and return the first element that passes a truth test, otherwise return 'undefined'
+function findElement(arr, func) {
+  let num = 0;
+  for (let i = 0; i < arr.length; i++) {
+    num = arr[i];
+    if (func(num)) {
+      return num;
+    }
+  }
+  return undefined;
+}
