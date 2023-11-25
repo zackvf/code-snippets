@@ -280,12 +280,12 @@ array.splice(index to start removing elements, number of elements to remove, rem
 array.slice(index to begin extraction, index to stop extraction); // shallow copies/extracts a certain number of elements from an existing array and puts those elements into a new array, and index to stop extraction is non-inclusive (set the stop index one element ahead to capture all desired elements)
 // copying an array using the spread operator - arr is the array of elements you pass the function and num is the number of times the array should be copied
 function copyArray(arr, num) {
-  let newArr = [];
-  while (num >= 1) {
-    newArr.push([...arr]);
-    num--;
+  let newArr = []; // create a new empty array to copy values into
+  while (num >= 1) { // continue to copy the user-passed array until reaching the final iteration of the user-passed number
+    newArr.push([...arr]); // spread the user-passed array into the new empty array
+    num--; // decrement the user-passed number each loop iteration in order to get to the point of exiting the loop
   }
-  return newArr;
+  return newArr; // return the newly created array with all of the instances of the user-passed array, num times
 }
 console.log(copyArray([el1, el2, el3], 3)); // expected output: [ [el1, el2, el3], [el1, el2, el3], [el1, el2, el3] ]
 // check for the presense of an element in an array
