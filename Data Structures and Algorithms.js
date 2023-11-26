@@ -290,7 +290,7 @@ function copyArray(arr, num) {
 console.log(copyArray([el1, el2, el3], 3)); // expected output: [ [el1, el2, el3], [el1, el2, el3], [el1, el2, el3] ]
 // check for the presense of an element in an array
 function arrayChecker(arr, elem) {
-  if (arr.indexOf(elem) !== -1) { // if the index of the user-passed element is not equal to -1, meaning if the index is a postive number, then it exists in the array
+  if (arr.indexOf(elem) !== -1) { // if the index of the user-passed element is not equal to -1, meaning if the index is zero or a postive number, then it exists in the array
     return true;
   } 
   return false; // return false by default
