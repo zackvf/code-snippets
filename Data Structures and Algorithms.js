@@ -501,4 +501,12 @@ function stringComparison(arr) {
       return arr[0].toLowerCase().indexOf(letter) !== -1;
     });
 }
-// 
+// split a user-passed array into chunks the size of the user-passed size parameter
+function chunkArrayInGroups(arr, size) {
+  const newArr = []; // create a new array to push array chunks to, so that we don't mutate the user-passed array with splice
+  while (arr.length > 0) { // loop through the user passed array as long as the array size is one or more elements
+    newArr.push(arr.splice(0, size)); // splice the user-passed array, starting at the first element and ending at the user-passed size parameter, and push that spliced array copy into the new array
+  }
+  return newArr; // return the new array after all chunks have been pushed to it
+}
+
