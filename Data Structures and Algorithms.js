@@ -514,6 +514,26 @@ function chunkArrayInGroups(arr, size) {
 // using prototype props to reduce redundancy - Properties in the prototype are shared among all instances of an instantiated object, as opposed to creating separate variables in each instance of the object
 // ex. of adding a prototype directly to a constructor function
 function Object(param) {
-  this.param = param;
-  Object.prototype.newParam = value
+  this.param = param; // own property
+  Object.prototype.newParam = value // prototype property
 }
+// the constructor property on an instantiated object is a reference to the constructor function that created the instance. The advantage of the constructor property is that it's possible to check for this property to find out what kind of object it is. Since the constructor property can be overwritten, it's typically better to use 'instanceof' to check the type of an object.
+// instead of tediously, individually adding prototype properties to objects, you can also create a new prototype object (using the original constructor function as the object reference, for example) and set all the desired properties in that new prototype object
+// ex.
+function Dog(name) {
+  this.name = name;
+}
+Dog.prototype = {
+  numLegs: 4,
+  eat: function() {
+    console.log('eat');
+  },
+  describe: function() {
+    console.log('describe');
+  }
+};
+const yeller = new Dog('yeller');
+console.log(yeller); // expected output: { name: 'yeller' }
+console.log(yeller.numLegs); // expected output: 4
+console.log(yeller.eat()); // expected output: eat, undefined
+console.log(yeller.eat); // expected output: [Function: eat]
