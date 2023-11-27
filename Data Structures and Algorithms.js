@@ -481,4 +481,24 @@ function getIndexToIns(arr, num) {
   }
   return arr.length;
 }
+// compare two string elements in an array and return true if the letters of the second string exist in the first, otherwise return false - procedurally
+function stringComparison(arr) {
+  const firstElement = arr[0].toLowerCase(); // set the array's first element to a string with all lower case characters
+  const secondElement = arr[1].toLowerCase(); // set the array's second element to a string with all lower case characters
+  for (let i = 0; i < secondElement.length; i++) { // loop through the second string's characters
+    if (firstElement.indexOf(secondElement[i]) < 0) { // if the first string doesn't contain the second string's given character at any index, return false
+      return false;
+    }
+  }
+  return true;
+}
+// declaritively
+function stringComparison(arr) {
+  return arr[1]
+    .toLowerCase()
+    .split("")
+    .every(function(letter) { // from mdn docs: The every() method is an iterative method. It calls a provided callbackFn function once for each element in an array, until the callbackFn returns a falsy value. If such an element is found, every() immediately returns false and stops iterating through the array. Otherwise, if callbackFn returns a truthy value for all elements, every() returns true.
+      return arr[0].toLowerCase().indexOf(letter) !== -1;
+    });
+}
 // 
