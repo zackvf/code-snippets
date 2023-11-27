@@ -510,3 +510,10 @@ function chunkArrayInGroups(arr, size) {
   return newArr; // return the new array after all chunks have been pushed to it
 }
 
+// object-oriented programming
+// using prototype props to reduce redundancy - Properties in the prototype are shared among all instances of an instantiated object, as opposed to creating separate variables in each instance of the object
+// ex. of adding a prototype directly to a constructor function
+function Object(param) {
+  this.param = param;
+  Object.prototype.newParam = value
+}
