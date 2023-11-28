@@ -543,7 +543,7 @@ Newobject.prototype.isPrototypeOf(otherobject);
 // an object's prototype is also a prototype of Object.prototype, hence why instantiated objects can use the "hasOwnProperty" method, which comes from Object.prototype.hasOwnProperty
 // ex. of instantiating an object without properties, which would later be assigned through creating a new prototype of that object
 function Animal() { } // new instance of the object, which would just contain the constructor function
-Animal.prototype = {
+Animal.prototype = { // this can be utilized as a 'supertype' among various instances of the Animal object, so as to follow DRY (don't repeat yourself) and avoid redundant code
   constructor: Animal,
   key: property,
   fn: function() {
