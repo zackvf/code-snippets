@@ -524,6 +524,7 @@ function Dog(name) {
   this.name = name;
 }
 Dog.prototype = {
+  constructor: Dog, // always remember to set the constructor when manually setting a new prototype object
   numLegs: 4,
   eat: function() {
     console.log('eat');
@@ -537,3 +538,15 @@ console.log(yeller); // expected output: { name: 'yeller' }
 console.log(yeller.numLegs); // expected output: 4
 console.log(yeller.eat()); // expected output: eat, undefined
 console.log(yeller.eat); // expected output: [Function: eat]
+// check if an object is a prototype of an instantiated object
+Newobject.prototype.isPrototypeOf(otherobject);
+// an object's prototype is also a prototype of Object.prototype, hence why instantiated objects can use the "hasOwnProperty" method, which comes from Object.prototype.hasOwnProperty
+// ex. of instantiating an object without properties, which would later be assigned through creating a new prototype of that object
+function Animal() { } // new instance of the object, which would just contain the constructor function
+Animal.prototype = {
+  constructor: Animal,
+  key: property,
+  fn: function() {
+    console.log('test');
+  } 
+};
