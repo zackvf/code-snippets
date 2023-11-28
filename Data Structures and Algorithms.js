@@ -551,7 +551,7 @@ Animal.prototype = { // this can be utilized as a 'supertype' among various inst
   } 
 };
 // direct way to inherit a prototype object's properties/methods to instances of that object - Object.create(obj) creates a new object, and sets obj as the new object's prototype. Recall that the prototype is like the "recipe" for creating an object. By setting the prototype of animal to be the prototype of Animal, you are effectively giving the animal instance the same "recipe" as any other instance of Animal.
-// ex.
+// ex. of inheriting behavior from the 'supertype' (i.e. parent prototype object)
 function Animal() { }
 Animal.prototype = {
   constructor: Animal,
@@ -562,3 +562,8 @@ Animal.prototype = {
 let duck = Object.create(Animal.prototype);
 let beagle = Object.create(Animal.prototype);
 // if Object.create(Animal) is used instead, the reference to the eat function will not exist
+// ex. of setting the 'subtype' (i.e. child prototype object) to a supertype
+function Dog() {}
+Dog.prototype = Object.create(Animal.prototype);
+let beagle = new Dog();
+// 
