@@ -641,4 +641,5 @@ let funModule = (function() {
 })();
 
 // functional programming
+// Functional programming is a style of programming where solutions are simple, isolated functions, without any side effects outside of the function scope, resulting in the following behavior: input for the function -> process the function undertakes -> output the function provides. Functional programming is about the following: Isolated functions - there is no dependence on the state of the program, which includes global variables that are subject to change / Pure functions - the same input always gives the same output / Functions with limited side effects - any changes, or mutations, to the state of the program outside the function are carefully controlled.
 // 
