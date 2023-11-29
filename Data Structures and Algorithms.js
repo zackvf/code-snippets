@@ -566,4 +566,21 @@ let beagle = Object.create(Animal.prototype);
 function Dog() {}
 Dog.prototype = Object.create(Animal.prototype);
 let beagle = new Dog();
-// 
+// reset an inherited constructor property from a supertype by manually setting the constructor property of the subtype
+// ex.
+function Animal() { }
+function Bird() { }
+Bird.prototype = Object.create(Animal.prototype);
+Bird.prototype.constructor = Bird; // without this line of code, the expected output of "duck.constructor" is "function Animal()", which is inheriting from the supertype
+let duck = new Bird();
+// a constructor function that inherits its prototype object from a supertype constructor function can still have its own methods in addition to inherited methods
+// ex.
+function Animal() { }
+Animal.prototype.eat = function() { console.log("nom nom nom"); };
+function Dog() { }
+Dog.prototype = Object.create(Animal.prototype);
+Dog.prototype.constructor = Dog;
+Dog.prototype.bark = function() { console.log("Woof!"); }
+let beagle = new Dog();
+beagle.eat(); // expected output: "nom nom nom"
+beagle.bark(); // expected output: "Woof!"
