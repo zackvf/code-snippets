@@ -604,4 +604,41 @@ glideMixin(bird);
 glideMixin(boat);
 bird.glide(); // expected output: weee
 boat.glide(); // expected output: weee
+// closure - a function always has access to the context in which it was created, specifically in regard to variables and returning/modifying their values. The simplest way to make a public object property private is by creating a variable within the object's constructor function. This changes the scope of that variable to be within the constructor function versus available globally. This way, the variable can only be accessed and changed by methods also within the constructor function.
+// ex. of a private variable
+function Bird() {
+  let weight = 15;
+  this.getWeight = function() {
+    return weight;
+  }
+}
+let chickadee = new Bird();
+chickadee.weight // expected output: undefined
+chickadee.getWeight // expected output: 15
+// An immediately invoked function expression (IIFE) is often used to group related functionality into a single object or module, where the object is packaged with all of the desired properties/methods that don't necessarily need to be shared among certain objects (such as grouping mixins together in an IIFE), which reduces redundancy 
+// ex.
+// original code:
+let isCuteMixin = function(obj) {
+  obj.isCute = function() {
+    return true;
+  };
+};
+let singMixin = function(obj) {
+  obj.sing = function() {
+    console.log("Singing to an awesome tune");
+  };
+};
+// IIFE module-pattern version of the above code:
+let funModule = (function() {
+  return {
+    isCuteMixin: function() {
+      return true;
+    },
+    singMixin: function() {
+        console.log("Singing to an awesome tune");
+    }
+  }
+})();
+
+// functional programming
 // 
