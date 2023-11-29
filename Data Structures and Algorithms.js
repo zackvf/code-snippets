@@ -584,3 +584,24 @@ Dog.prototype.bark = function() { console.log("Woof!"); }
 let beagle = new Dog();
 beagle.eat(); // expected output: "nom nom nom"
 beagle.bark(); // expected output: "Woof!"
+// inherited methods can be overrode if the same method name is used in the subtype/child object as in the supertype/parent object
+// behavior is shared through inheritance. However, there are cases when inheritance is not the best solution. Inheritance does not work well for unrelated objects that may share one basic characteristic. For unrelated objects, it's better to use mixins. A mixin allows objects to use a collection of functions that don't need to be shared with other functions.
+// ex. of a mixin function applying a method property to objects
+let bird = {
+  name: "Donald",
+  numLegs: 2
+};
+let boat = {
+  name: "Warrior",
+  type: "race-boat"
+};
+let glideMixin = function(obj) {
+  obj.glide = function() {
+    console.log("weee");
+  }
+}
+glideMixin(bird);
+glideMixin(boat);
+bird.glide(); // expected output: weee
+boat.glide(); // expected output: weee
+// 
