@@ -34,4 +34,11 @@ Objects:
 - ordinary objects = unordered named values
 	-- arrays (objects) = ordered numbered values (i.e. indexed values)
 - functions and classes are specialized objects
-- global object
+- global object:
+	-- properties of this object are the globally-defined identifiers available to the JavaScript program being run
+		--- properties defined:
+			---- global constants (e.g. undefined, Infinity, NaN)
+			---- global functions (e.g. isNaN(), parseInt(), eval())
+			---- constructor functions (e.g. Date(), RegExp(), String(), Object(), Array())
+	-- gets created whenever the JavaScript interpreter starts running and whenever a web browser loads a web page
+	-- ES6 2020 introduced "globalThis" as the new standard to refer to the global object in any context
