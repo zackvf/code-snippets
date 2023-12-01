@@ -42,3 +42,36 @@ Objects:
 			---- constructor functions (e.g. Date(), RegExp(), String(), Object(), Array())
 	-- gets created whenever the JavaScript interpreter starts running and whenever a web browser loads a web page
 	-- ES6 2020 introduced "globalThis" as the new standard to refer to the global object in any context
+
+
+Pillars of Object-Oriented Programming:
+- procedural programming:
+	-- "decoupled," older style of of programming that came before OoP, can easily lead to spaghetti code
+	-- while it's simple and straightforward, there's a significant amount of interdependencies among functions and variables with numerous function parameters
+	-- ex.
+		--- let varOne = value x;
+			let varTwo = value y;
+			let varThree = value z;
+			function func(param 1, param 2, param 3) {
+				return param 1 + (param 2 * param 3);
+			}
+-- object-oriented programming:
+	-- provides "encapsulation," which reduces complexity
+		--- variables and the associated functions are closely related so they are grouped together as part of a single unit
+		--- allows for fewer function parameters, which reduces chances of spaghetti code
+		--- ex.
+			---- let newObject = {
+				varOne: value x,
+				varTwo: value y,
+				varThree: value z,
+				function: func() {
+					return this.varOne + (this.varTwo * this.varThree);
+				}
+				};
+				newObject.function();
+		--- "The best functions are those with no parameters." meaning fewer parameters in functions is better for usability/maintainability
+	-- provides "abstraction," reducing unnecessary access to object properties
+		--- simplifies object interfaces through fewer properties and methods, which improves the programmers' understandability and usability of the object/code
+		--- reduces impact of changes to objects
+		--- hides details and complexity, showing only essential code
+		
