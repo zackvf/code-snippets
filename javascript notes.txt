@@ -1,0 +1,37 @@
+Expressions:
+- compute a value but nothing happens (no program state alteration on their own)
+- ex. let x = 1, y = 2;
+
+
+Statements:
+- no inherent value but they can alter program state
+- ex. x <= y
+
+
+Control Structures:
+- conditional statements and loops
+- ex. while (x <= y) { x++ }
+
+
+Arrow Functions:
+- allows one to pass an unnamed function as an argument to another function
+- ex. const plusOne = x => x + 1; // the input 'x' maps to the output 'x + 1'
+
+
+Primitive Value Types:
+- number, string, boolean, null, undefined, symbol
+- null and undefined are the only primitives that methods cannot be invoked on
+	-- null = program-level, normal, expected absense of value
+	-- undefined = system-level, unexpected, potentially error-like absense of value
+
+
+Objects:
+- functions used with/on objects are 'methods'
+	-- all JavaScript objects have inherent/built-in methods
+- 'this' keyword refers to the object on which the method is defined
+- object value types = anything that is not a primitive value (see above)
+- collection of properties that have key/value pairs, where the value can be a primitive or another object (i.e. nested object)
+- ordinary objects = unordered named values
+	-- arrays (objects) = ordered numbered values (i.e. indexed values)
+- functions and classes are specialized objects
+- global object
