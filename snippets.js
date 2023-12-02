@@ -1,4 +1,4 @@
-// countdown function with recursion -
+// countdown function with recursion
 function countdown(n) {
   if (n < 1) {
     return [];
@@ -9,7 +9,7 @@ function countdown(n) {
   }
 }
 
-// create a range of numbers with recursion -
+// create a range of numbers with recursion
 function rangeOfNumbers(startNum, endNum) {
   if (startNum > endNum) {
     return [];
@@ -136,3 +136,44 @@ function sum(arr, n) {
     if (n <= 0) return 0;
     return sum(arr, n - 1) + arr[n - 1];
 }
+
+
+// convert celsius temperature value to fahrenheit and vice versa
+function convertCtoF(c) {
+  return c * 9/5 + 32;
+}
+function convertFtoC(f) {
+  return (f - 32) * 5/9;
+}
+
+
+// reverse a string using a for loop
+function reverseString(str) {
+  let newStr = "";
+  for (let i = str.length - 1; i >= 0; i--) {
+    newStr += str[i];
+  }
+  return newStr;
+}
+
+
+// return the factorial of the provided integer, where the integer is greater than or equal to zero - this solution uses "head recursion" where all evaluation calcs are stored on the stack until the base case is reached
+function factorialize(num) {
+  if (num <= 0) return 1;
+  return factorialize(num - 1) * num;
+}
+// factorialize function using "tail recursion" for optimized stack performace/memory usage
+function factorialize(num, factorial = 1) {
+  if (num <= 0) return factorial;
+  return factorialize(num - 1, factorial * num);
+}
+// factorialize function using a for loop
+function factorialize(num) {
+  let product = 1;
+  for (let i = 2; i <= num; i++) {
+    product *= i;
+  }
+  return product;
+}
+
+
