@@ -157,12 +157,13 @@ function reverseString(str) {
 }
 
 
-// return the factorial of the provided integer, where the integer is greater than or equal to zero - this solution uses "head recursion" where all evaluation calcs are stored on the stack until the base case is reached
+// return the factorial of the provided integer, where the integer is greater than or equal to zero
+// "head recursion" where all evaluation calcs are stored on the stack until the base case is reached
 function factorialize(num) {
   if (num <= 0) return 1;
   return factorialize(num - 1) * num;
 }
-// factorialize function using "tail recursion" for optimized stack performace/memory usage
+// "tail recursion" for optimized stack performace/memory usage
 function factorialize(num, factorial = 1) {
   if (num <= 0) return factorial;
   return factorialize(num - 1, factorial * num);
@@ -177,3 +178,13 @@ function factorialize(num) {
 }
 
 
+// check for the presense of an element in an array
+function arrayChecker(arr, elem) {
+  if (arr.indexOf(elem) !== -1) { // if the index of the user-passed element is not equal to -1, meaning if the index is zero or a postive number, then it exists in the array
+    return true;
+  } 
+  return false; // return false by default
+}
+
+
+// 
