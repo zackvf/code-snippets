@@ -1,29 +1,26 @@
+- Basics -
+
 Expressions:
 - compute a value but nothing happens (no program state alteration on their own)
 - ex. let x = 1, y = 2;
-
 
 Statements:
 - no inherent value but they can alter program state
 - ex. x <= y
 
-
 Control Structures:
 - conditional statements and loops
 - ex. while (x <= y) { x++ }
 
-
 Arrow Functions:
 - allows one to pass an unnamed function as an argument to another function
 - ex. const plusOne = x => x + 1; // the input 'x' maps to the output 'x + 1'
-
 
 Primitive Value Types:
 - number, string, boolean, null, undefined, symbol
 - null and undefined are the only primitives that methods cannot be invoked on
 	-- null = program-level, normal, expected absense of value
 	-- undefined = system-level, unexpected, potentially error-like absense of value
-
 
 Objects:
 - functions used with/on objects are 'methods'
@@ -47,77 +44,77 @@ Objects:
 
 - Pillars of Object-Oriented Programming -
 
-- Procedural Programming:
-	-- "decoupled," older style of of programming that came before OoP, can easily lead to spaghetti code
-	-- while it's simple and straightforward, there's a significant amount of interdependencies among functions and variables with numerous function parameters
-	-- ex.
-		--- let varOne = value x;
-			let varTwo = value y;
-			let varThree = value z;
-			function func(param 1, param 2, param 3) {
-				return param 1 + (param 2 * param 3);
-			}
+Procedural Programming:
+- "decoupled," older style of of programming that came before OoP, can easily lead to spaghetti code
+- while it's simple and straightforward, there's a significant amount of interdependencies among functions and variables with numerous function parameters
+- ex.
+	let varOne = value x;
+	let varTwo = value y;
+	let varThree = value z;
+	function func(param 1, param 2, param 3) {
+			return param 1 + (param 2 * param 3);
+		}
 
-- Object-Oriented Programming:
-	-- provides "encapsulation," which reduces complexity
-		--- variables and the associated functions are closely related so they are grouped together as part of a single unit
-		--- allows for fewer function parameters, which reduces chances of spaghetti code
+Object-Oriented Programming:
+- provides "encapsulation," which reduces complexity
+	-- variables and the associated functions are closely related so they are grouped together as part of a single unit
+	-- allows for fewer function parameters, which reduces chances of spaghetti code
 		--- ex.
-			---- let newObject = {
+			let newObject = {
 				varOne: value x,
 				varTwo: value y,
 				varThree: value z,
 				function: func() {
 					return this.varOne + (this.varTwo * this.varThree);
-				}
+					}
 				};
 				newObject.function();
 		--- "The best functions are those with no parameters." meaning fewer parameters in functions is better for usability/maintainability
-	-- provides "abstraction," which reduces unnecessary access to objects/properties
-		--- simplifies object interfaces through fewer properties and methods, which improves the programmers' understandability and usability of the object/code
-		--- reduces impact of changes to objects
-		--- hides details and complexity, showing only essential code
-	-- provides "inheritance," which reduces redundant code
-		--- apply common properties and methods to any number of like-objects, removing the need to re-set each property and variable among the newly created objects
-		--- enables 'polymorphism,' which removes the need for long if...else statements and switch...case statements
+- provides "abstraction," which reduces unnecessary access to objects/properties
+	-- simplifies object interfaces through fewer properties and methods, which improves the programmers' understandability and usability of the object/code
+	-- reduces impact of changes to objects
+	-- hides details and complexity, showing only essential code
+- provides "inheritance," which reduces redundant code
+	-- apply common properties and methods to any number of like-objects, removing the need to re-set each property and variable among the newly created objects
+	-- enables 'polymorphism,' which removes the need for long if...else statements and switch...case statements
 
-- Working with Objects:
-	-- using object-literal syntax ({}) is not the best method for creating and duplicating objects with one or more methods (i.e. 'behaviors'), therefore Factory and Constructor functions exist
-	-- 'Factory' function:
-		--- function createCircle(radius) {
-				return {
-					radius, // same as saying 'radius: radius'
-					draw: function() {
-						console.log('Drawing now...');
-					}
+Working with Objects:
+- using object-literal syntax ({}) is not the best method for creating and duplicating objects with one or more methods (i.e. 'behaviors'), therefore Factory and Constructor functions exist
+- 'Factory' function:
+	-- ex. function createCircle(radius) {
+		return {
+			radius, // same as saying 'radius: radius'
+			draw: function() {
+				console.log('Drawing now...');
 				}
 			}
-			const circle = createCircle(2); 
-			circle.radius // expected output: 2
-			circle.draw(); // expected output: "Drawing now..."
-	-- 'Constructor' function (similar to 'class' in other languages):
-		--- function Circle(radius) {
-				this.radius = radius,
-				this.draw = function() {
-					console.log('Drawing now...');
-				}
+		}
+		const circle = createCircle(2); 
+		circle.radius // expected output: 2
+		circle.draw(); // expected output: "Drawing now..."
+- 'Constructor' function (similar to 'class' in other languages):
+	-- ex. function Circle(radius) {
+		this.radius = radius,
+		this.draw = function() {
+			console.log('Drawing now...');
 			}
-			const newCircle = new Circle(2);
-			---- "new" operator creates an empty object, points 'this' scope to that new empty object, then returns the object defined in the function
-	-- while both Factory and Constructor functions create new objects, Factory functions simply create an object and return it while Constructor functions are classes (templates, blueprints) of objects which can get created using the 'new' keyword
-	-- every object has a Constructor property, which references the function used to create that object
-	-- object 'dot' notation vs. 'bracket' notation:
-		--- dot notation is simpler, less verbose, and used is most scenarios
-		--- bracket notation is to be used when properties have spaces or special characters between words in the property name/key
-			---- more verbose than dot notation as a string literal is required within the square brackets
+		}
+		const newCircle = new Circle(2);
+		--- "new" operator creates an empty object, points 'this' scope to that new empty object, then returns the object defined in the function
+- while both Factory and Constructor functions create new objects, Factory functions simply create an object and return it while Constructor functions are classes (templates, blueprints) of objects which can get created using the 'new' keyword
+- every object has a Constructor property, which references the function used to create that object
+- object 'dot' notation vs. 'bracket' notation:
+	-- dot notation is simpler, less verbose, and used is most scenarios
+	-- bracket notation is to be used when properties have spaces or special characters between words in the property name/key
+		--- more verbose than dot notation as a string literal is required within the square brackets
 
-- Primitives vs. Objects:
-	-- objects are copied by their reference (i.e. references to an object are what gets copied), where multiple different variables can all refer to the same object's property
-		--- reference types: objects, arrays, functions
-	-- primitives get copied by their value (a.k.a. independent copies, where the value exists on its own within the copy variable)
-		--- value types: number, string, boolean, symbol, undefined, null
+Primitives vs. Objects:
+- objects are copied by their reference (i.e. references to an object are what gets copied), where multiple different variables can all refer to the same object's property
+	-- reference types: objects, arrays, functions
+- primitives get copied by their value (a.k.a. independent copies, where the value exists on its own within the copy variable)
+	-- value types: number, string, boolean, symbol, undefined, null
 
-- Object.defineProperty / Properties:
-	-- used for 'getter'/'setter' functions
-	-- used to define read-only properties of objects
-	-- maintains closure of local variables used in the getter/setter functions
+Object.defineProperty / Properties:
+- used for 'getter'/'setter' functions
+- used to define read-only properties of objects
+- maintains closure of local variables used in the getter/setter functions
