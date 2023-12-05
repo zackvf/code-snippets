@@ -78,4 +78,26 @@ Pillars of Object-Oriented Programming:
 		--- apply common properties and methods to any number of like-objects, removing the need to re-set each property and variable among the newly created objects
 		--- enables 'polymorphism,' which removes the need for long if...else statements and switch...case statements
 - working with objects:
-	-- 
+	-- object-literal syntax ({}) not the best for creating and duplicating objects with one or more methods (i.e. behaviors)
+	-- 'Factory' function:
+		--- function createCircle(radius) {
+				return {
+					radius, // same as saying 'radius: radius'
+					draw: function() {
+						console.log('Drawing now...');
+					}
+				}
+			}
+			const circle = createCircle(2); 
+			circle.radius // expected output: 2
+			circle.draw(); // expected output: "Drawing now..."
+	-- 'Constructor' function (similar to 'class' in other langs):
+		--- function Circle(radius) {
+				this.radius = radius,
+				this.draw = function() {
+					console.log('Drawing now...');
+				}
+			}
+			const newCircle = new Circle(2);
+			---- "new" operator creates an empty object, points 'this' scope to that new empty object, then returns the object defined in the function
+	-- while both Factory and Constructor functions create new objects, Factory functions simply create an object and return it while Constructor functions are classes (templates, blueprints, etc.) of objects which can get created with the 'new' keyword
