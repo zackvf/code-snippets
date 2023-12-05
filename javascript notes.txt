@@ -55,7 +55,7 @@ Pillars of Object-Oriented Programming:
 			function func(param 1, param 2, param 3) {
 				return param 1 + (param 2 * param 3);
 			}
--- object-oriented programming:
+- object-oriented programming:
 	-- provides "encapsulation," which reduces complexity
 		--- variables and the associated functions are closely related so they are grouped together as part of a single unit
 		--- allows for fewer function parameters, which reduces chances of spaghetti code
@@ -70,8 +70,12 @@ Pillars of Object-Oriented Programming:
 				};
 				newObject.function();
 		--- "The best functions are those with no parameters." meaning fewer parameters in functions is better for usability/maintainability
-	-- provides "abstraction," reducing unnecessary access to object properties
+	-- provides "abstraction," which reduces unnecessary access to objects/properties
 		--- simplifies object interfaces through fewer properties and methods, which improves the programmers' understandability and usability of the object/code
 		--- reduces impact of changes to objects
 		--- hides details and complexity, showing only essential code
-		
+	-- provides "inheritance," which reduces redundant code
+		--- apply common properties and methods to any number of like-objects, removing the need to re-set each property and variable among the newly created objects
+		--- enables 'polymorphism,' which removes the need for long if...else statements and switch...case statements
+- working with objects:
+	-- 
