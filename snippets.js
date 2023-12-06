@@ -1,4 +1,6 @@
-// countdown function with recursion
+// Recursion examples
+
+// countdown function
 function countdown(n) {
   if (n < 1) {
     return [];
@@ -9,7 +11,7 @@ function countdown(n) {
   }
 }
 
-// create a range of numbers with recursion
+// create a range of numbers
 function rangeOfNumbers(startNum, endNum) {
   if (startNum > endNum) {
     return [];
@@ -20,6 +22,21 @@ function rangeOfNumbers(startNum, endNum) {
   }
 }
 
+// adding all array elements together, where arr is the array of numbers passed and n is the array length to capture a desired result
+function sum(arr, n) {
+    if (n <= 0) return 0;
+    return sum(arr, n - 1) + arr[n - 1];
+}
+
+// return the factorial of the provided integer, where the integer is greater than or equal to zero, using "tail recursion" for optimized stack performace/memory usage
+function factorialize(num, factorial = 1) {
+  if (num <= 0) return factorial;
+  return factorialize(num - 1, factorial * num);
+}
+
+
+
+// General examples
 
 // basic calculator
 const calculator = {
@@ -37,7 +54,6 @@ const calculator = {
     }
 }
 
-
 // basic clock
 function clock() {
     setInterval(() => {
@@ -45,7 +61,6 @@ function clock() {
         console.log(new Date().toLocaleTimeString());
     }, 1000);
 }
-
 
 // basic stopwatch
 function Stopwatch() {
@@ -84,7 +99,6 @@ function Stopwatch() {
     });
 }
 
-
 // mimic css pesticide extension (basic functionality)
 function highlightDivs() {
     const alldivs = document.getElementsByTagName("*");
@@ -94,17 +108,14 @@ function highlightDivs() {
     }
 }
 
-
 // older version of Node file system create/read/update/delete operations
 const fs = require('fs');
-
 // Create a new file and write to it
 fs.writeFile('./hello.txt', 'qwer', err => {
     if (err) {
         console.log(err);
     }
 })
-
 // Read an existing file
 fs.readFile('./hello.txt', (err, data) => {
  if (err) {
@@ -114,14 +125,12 @@ fs.readFile('./hello.txt', (err, data) => {
 })
 const file = fs.readFileSync('./hello.txt');
 console.log('Sync', file.toString());
-
 // Append an existing file
 fs.appendFile('./hello.txt', ' 123', err => {
  if (err) {
      console.log(err);
  }
 })
-
 // Delete an existing file
 fs.unlink('./hello.txt', err => {
  if (err) {
@@ -129,14 +138,6 @@ fs.unlink('./hello.txt', err => {
  }
  console.log('File has been deleted.');
 })
-
-
-// basic recursion example - adding all array elements together, where arr is the array of numbers passed and n is the array length to capture a desired result
-function sum(arr, n) {
-    if (n <= 0) return 0;
-    return sum(arr, n - 1) + arr[n - 1];
-}
-
 
 // convert celsius temperature value to fahrenheit and vice versa
 function convertCtoF(c) {
@@ -146,8 +147,7 @@ function convertFtoC(f) {
   return (f - 32) * 5/9;
 }
 
-
-// reverse a string using a for loop
+// reverse a string
 function reverseString(str) {
   let newStr = "";
   for (let i = str.length - 1; i >= 0; i--) {
@@ -155,28 +155,6 @@ function reverseString(str) {
   }
   return newStr;
 }
-
-
-// return the factorial of the provided integer, where the integer is greater than or equal to zero
-// "head recursion" where all evaluation calcs are stored on the stack until the base case is reached
-function factorialize(num) {
-  if (num <= 0) return 1;
-  return factorialize(num - 1) * num;
-}
-// "tail recursion" for optimized stack performace/memory usage
-function factorialize(num, factorial = 1) {
-  if (num <= 0) return factorial;
-  return factorialize(num - 1, factorial * num);
-}
-// factorialize function using a for loop
-function factorialize(num) {
-  let product = 1;
-  for (let i = 2; i <= num; i++) {
-    product *= i;
-  }
-  return product;
-}
-
 
 // check for the presense of an element in an array
 function arrayChecker(arr, elem) {
@@ -186,5 +164,3 @@ function arrayChecker(arr, elem) {
   return false; // return false by default
 }
 
-
-// 
