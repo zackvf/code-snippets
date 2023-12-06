@@ -4,24 +4,19 @@ array[0] = c;
 array[1] = a;
 array[2] = b;
 
-
 // prevent object mutation - can be called within a function
 Object.freeze(obj);
 
-
-// no need for parans when passing a single arg to an anonymous fn with arrow syntax
+// no need for parantheses when passing a single argument to an anonymous function with arrow syntax
 const function = arg => arg + 1;
 
-
-// multiple args in an anon fn
+// multiple arguments in an anonymous function
 const arrConcat = (arr1, arr2) => arr1.concat(arr2);
 
-
-// default params in an anon fn
+// default parameters in an anonymous function
 const increment = (number, value = 1) => number + value;
 
-
-// using rest param in fn declaration
+// using the 'rest' parameter in a function declaration
 const sum = (...args) => {
   let total = 0;
   for (let i = 0; i < args.length; i++) {
@@ -30,14 +25,12 @@ const sum = (...args) => {
   return total;
 }
 
-
 // destructing assignment to extract object property values
 const HIGH_TEMPERATURES = {
   yesterday: 75,
   today: 77,
   tomorrow: 80
 };
-
 const { today, tomorrow } = HIGH_TEMPERATURES;
 
 // which is the same as saying
@@ -668,4 +661,23 @@ console.log(
   tea4GreenTeamFCC,
   tea4BlackTeamFCC
 ); // expected output: [ 'greenTea' x27] [ 'blackTea' x13]
-// 
+// edit the value(s) of a global variable without mutating the global variable
+// ex. 1
+function increment() {
+  return globalValue + 1; // using globalValue++ mutates the variable
+}
+// ex. 2
+const bookList = ["The Hound of the Baskervilles", "On The Electrodynamics of Moving Bodies", "Philosophiæ Naturalis Principia Mathematica", "Disquisitiones Arithmeticae"];
+function add(bookList, bookName) { // declare function parameters for clarity
+  let books = [...bookList]; // create an actual copy of the passed array, where using 'let books = bookList' just creates a reference to the original bookList array
+  books.push(bookName); // pushing the new value to the copied array
+  return books; // returning the copied array
+}
+function remove(bookList, bookName) {
+  let books = [...bookList];
+  const book_index = books.indexOf(bookName);
+  if (book_index >= 0) {
+    books.splice(book_index, 1);
+    return books;
+    }
+}
