@@ -269,8 +269,8 @@ array.pop(); // delete an element from the end of an array
 array.unshift(); // add an element to the beginning of an array
 array.shift(); // remove an element from the beginning of an array
 array.toString(); // converts an array to a comma-separated string of the array's values
-array.splice(index to start removing elements, number of elements to remove, remaining arguments to be inserted starting at the specified index); // the number of elements to remove is inclusive, so the starting point is removed from the original array
-array.slice(index to begin extraction, index to stop extraction); // shallow copies/extracts a certain number of elements from an existing array and puts those elements into a new array, and index to stop extraction is non-inclusive (set the stop index one element ahead to capture all desired elements)
+array.splice(index to start removing elements, number of elements to remove, remaining arguments to be inserted starting at the specified index); // the number of elements to remove is inclusive, so the starting point is removed from the original array. mutates the original array instead of creating a copy.
+array.slice(index to begin extraction, index to stop extraction); // shallow copies/extracts a certain number of elements from an existing array and puts those elements into a new array. index to stop extraction is non-inclusive (set the stop index one element ahead to capture all desired elements).
 // copying an array using the spread operator - arr is the array of elements you pass the function and num is the number of times the array should be copied
 function copyArray(arr, num) {
   let newArr = []; // create a new empty array to copy values into
@@ -812,8 +812,46 @@ const filteredList = ratedWell.map(movie => ({title: movie['Title'], rating: mov
 Array.prototype.myMap = function(callback) {
   const newArray = [];
   for (let i = 0; i < this.length; i++) {
-    newArray.push(callback(this[i], i, this)); // callback functions in map() get called with three arguments: element (current element being processed in the array), index (index of the current element being processed in the array), and array (the array that the map function was called on)
+    newArray.push(callback(this[i], i, this)); // callback functions in map() get called with three arguments: element (the current element being processed in the array), index (index of the current element being processed in the array), and array (the array that the map function was called on)
   }
   return newArray;
+};
+
+// writing a custom filter function
+Array.prototype.myFilter = function(callback) {
+  const newArray = [];
+  for (let i = 0; i < this.length; i++) {
+    if (Boolean(callback(this[i], i, this)) === true) {
+      newArray.push(this[i]);
+    }
+  }
+  return newArray;
+}
+
+// in functional programming, instead of using push() to add an array's elements onto a different array, use concat() to avoid mutating the array that will have values pushed onto it, as concat() returns a new array
+
+// ex. get the average rating of all of the movies directed by christopher nolan
+function getRating(watchList) {
+  let averageRating = watchList
+    .filter(movie => movie.Director === "Christopher Nolan")
+    .map(movie => Number(movie.imdbRating))
+    .reduce((total, rating) => total + rating) 
+      / watchList.filter(movie => movie.Director === "Christopher Nolan").length;
+  return averageRating;
+}
+
+// ex. given an array of real numbers, including negative numbers and floating point numbers, return an array of just the positive integers squared
+const squareList = arr => {
+  return arr
+    .filter(int => int > 0 && int % 1 === 0)
+    .map(int => int * int) // can also say Math.pow(int, 2) to square a number
+};
+// using reduce() on its own
+const squareList = arr => {
+  return arr.reduce((sqrIntegers, num) => {
+    return Number.isInteger(num) && num > 0
+      ? sqrIntegers.concat(num * num)
+      : sqrIntegers;
+  }, []);
 };
 
