@@ -797,13 +797,17 @@ const watchList = [
     "Response": "True"
   }
 ];
-// without using map
+// without using map()
 const ratings = [];
 for (let i = 0; i < watchList.length; i++) {
   ratings.push({title: watchList[i]["Title"], rating: watchList[i]["imdbRating"]});
 }
-// using map
+// using map()
 const ratings = watchList.map(movie => ({title: movie['Title'], rating: movie['imdbRating']}));
+// using filter() to generate a new version of watchList and then using map() to only return the title and rating of each remaining film
+const ratedWell = watchList.filter(movie => parseFloat(movie['imdbRating']) >= 8.0);
+const filteredList = ratedWell.map(movie => ({title: movie['Title'], rating: movie['imdbRating']}));
+
 // writing a custom map function
 Array.prototype.myMap = function(callback) {
   const newArray = [];
@@ -812,3 +816,4 @@ Array.prototype.myMap = function(callback) {
   }
   return newArray;
 };
+
