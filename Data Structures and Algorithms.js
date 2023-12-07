@@ -633,6 +633,7 @@ let funModule = (function() {
   }
 })();
 
+
 // functional programming
 // Functional programming is a style of programming where solutions are simple, isolated functions, without any side effects outside of the function scope, resulting in the following behavior: input for the function -> process the function undertakes -> output the function provides. Functional programming is about the following: Isolated functions - there is no dependence on the state of the program, which includes global variables that are subject to change / Pure functions - the same input always gives the same output / Functions with limited side effects - any changes, or mutations, to the state of the program outside of the function are carefully controlled.
 // Don't alter a variable or object - create new variables and objects and return them if need be from a function. Hint: using something like const newArr = arrVar, where arrVar is an array will simply create a reference to the existing variable and not a copy. So changing a value in newArr would change the value in arrVar.
@@ -812,7 +813,7 @@ const filteredList = ratedWell.map(movie => ({title: movie['Title'], rating: mov
 Array.prototype.myMap = function(callback) {
   const newArray = [];
   for (let i = 0; i < this.length; i++) {
-    newArray.push(callback(this[i], i, this)); // callback functions in map() get called with three arguments: element (the current element being processed in the array), index (index of the current element being processed in the array), and array (the array that the map function was called on)
+    newArray.push(callback(this[i], i, this)); // callback functions get called with three arguments: element (the current element being processed in the array), index (index of the current element being processed in the array), and array (the array that the map function was called on)
   }
   return newArray;
 };
@@ -861,5 +862,34 @@ function nonMutatingSort(arr) {
   return arr
     .concat([]) // can also use slice() here to copy the passed array
     .sort((a, b) => a - b);
+}
+
+// String.prototype.split() splits a string into an array of strings. It takes an argument for the delimiter, which can be a character to use to break up the string or a regular expression. For example, if the delimiter is a space, you get an array of words, and if the delimiter is an empty string, you get an array of each character in the string.
+// ex. - remove special characters and punctuation from a string with split()
+function onlyString(str) {
+  return str.split(/[^a-zA-Z0-9/s]/);
+}
+
+// Array.prototype.join() joins the elements of an array together to create a string. It takes an argument for the delimiter that is used to separate the array elements in the string.
+// ex. - with join, take a string parameter (which may contain special characters and punctuation) and return only a string
+function onlySentence(str) {
+  return str
+    .split(/[^a-zA-Z0-9\s]/)
+    .join(" "); // using a space simply adds a space between words, whereas using ("") would put all the words in the sentence together to form one long word
+}
+
+// ex. - turn a string with random whitespace into a hyphenated url
+function onlyURL(title) {
+  return title
+    .toLowerCase()
+    .trim()
+    .split(/\s+/)
+    .join("-");
+}
+
+// Array.prototype.every(callbackFn) returns a boolean - true if all array elements pass the test in the callback function, false if not
+// ex. - check if all elements of an array are positive
+function checkPositive(arr) {
+  return arr.every(element => element > 0);
 }
 
