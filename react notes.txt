@@ -1,0 +1,45 @@
+- Basics -
+
+Components:
+- you can only ever return a single element in a component
+	-- to return/render multiple JSX elements, use a 'Fragment'
+		--- ex.
+			<>
+				<ComponentOne />
+				<ComponentTwo />
+			</>
+		--- no need to use 'div' tags if using a Fragment
+
+Hooks:
+- always written at the top of the script/'App' default export function
+	-- trying to put a 'useEffect()' hook inside of a conditional statement would result in an error of "Rendered fewer hooks than expected. This may be caused by an accidental early return statement."
+- the same number of hooks that exist in your file have to be rendered every time your file is loaded/run
+- good practice to follow the same file structure across all of a project's components, as opposed to placing components/code randomly
+	-- ex.
+		export function () {
+		hook(s)
+		functions
+		return JSX
+		}
+- useEffect() hook:
+	-- the same as the component lifecycle structure in older React versions
+		--- ex.
+			componentDidMount() = component initialized
+			componentDidUpdate() = app state gets updated
+			componentWillUnmount() = component destroyed
+		--- allows one to implement the full component lifescycle within a single function API
+	-- React runs the user-defined function (first argument of the hook), a.k.a the hook's 'side-effect,' after the DOM has been updated
+	-- runs any time stateful data changes on a component
+
+
+
+- React development using Vite (front-end development tool) -
+
+Vite:
+- a javascript build tool, such as Webpack (module bundler tool)
+	-- javascript bundlers take some number of uncompressed source files and combines them into a single, compressed bundle file that can be loaded by a browser in a single network request
+		--- greatly improves development time as well as browser communication efficiency
+- imports project source code (can be seen from the 'Network' tab in browsers' devtools)
+- makes typescript development faster
+- utilizes 'Hot Module Replacement' (HMR), which provides a fast feedback loop during development and preserves application state while source code is being modified
+
