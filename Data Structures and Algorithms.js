@@ -855,3 +855,11 @@ const squareList = arr => {
   }, []);
 };
 
+// Array.prototype.sort() mutates the original array it's called on
+// ex. sort an array of numbers in ascending order without mutating the original array
+function nonMutatingSort(arr) {
+  return arr
+    .concat([]) // can also use slice() here to copy the passed array
+    .sort((a, b) => a - b);
+}
+
