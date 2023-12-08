@@ -893,3 +893,23 @@ function checkPositive(arr) {
   return arr.every(element => element > 0);
 }
 
+// Array.prototype.some(callbackFn) - opposite of every(), returns true if any of the array elements pass the test in the callback function, false if none do
+// ex. - check if any elements of an array are positive
+function checkPositive(arr) {
+  return arr.some(element => element > 0);
+}
+
+// currying and arity
+// arity = number of arguments a function requires, currying = convert function of N arity into N functions of arity 1 (more functions, less arity = more functional output control?)
+// ex.
+function addAllThree(x) {
+  return function addNextNum(y) {
+    return function addZ(z) {
+      return x + y + z;
+    }
+  }
+}
+addAllThree(1)(2)(3); // expected output: 6
+
+
+
