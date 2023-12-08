@@ -902,14 +902,14 @@ function checkPositive(arr) {
 // currying and arity
 // arity = number of arguments a function requires, currying = convert function of N arity into N functions of arity 1 (more functions, less arity = more functional output control?)
 // ex.
-function addAllThree(x) {
-  return function addNextNum(y) {
-    return function addZ(z) {
-      return x + y + z;
-    }
-  }
-}
+// function addAllThree(x) {
+//   return function addNextNum(y) {
+//     return function addZ(z) {
+//       return x + y + z;
+//     }
+//   }
+// }
+const addAllThree = x => y => z => x + y + z;
 addAllThree(1)(2)(3); // expected output: 6
-
 
 
