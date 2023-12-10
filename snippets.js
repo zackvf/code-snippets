@@ -171,3 +171,12 @@ function nonMutatingSort(arr) {
     .sort((a, b) => a - b);
 }
 
+// turn a string with random whitespace into a hyphenated url
+function onlyURL(title) {
+  return title
+    .toLowerCase()
+    .trim()
+    .split(/\s+/)
+    .join("-");
+}
+
