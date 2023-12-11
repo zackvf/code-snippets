@@ -913,15 +913,15 @@ const addAllThree = x => y => z => x + y + z;
 addAllThree(1)(2)(3); // expected output: 6
 
 
-// sum all numbers among a range of two integers, provided either forwards or backwards
+// sum all numbers among a range of two integers (inclusive of the start and end points), the range being provided either forwards or backwards
 function sumAll(arr) {
   const newArr = arr
-    .sort((a, b) => a - b)
     .slice();
+    .sort((a, b) => a - b)
   let newArr2 = [];
   for (let i = newArr[0]; i <= newArr[1]; i++) {
     newArr2.push(i);
   }
   return newArr2.reduce((start, end) => start + end); 
 }
-
+// ex. sumAll([10, 5]) // expected output: 45
