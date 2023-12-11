@@ -180,3 +180,12 @@ function onlyURL(title) {
     .join("-");
 }
 
+// turn a string with random whitespace into a hyphenated url
+function onlyURL(title) {
+  return title
+    .toLowerCase()
+    .trim()
+    .split(/\s+/)
+    .join("-");
+}
+
