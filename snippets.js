@@ -185,3 +185,10 @@ function onlyURL(title) {
     .join("-");
 }
 
+// take a string parameter (which may contain special characters and punctuation) and return only a string
+function onlySentence(str) {
+  return str
+    .split(/[^a-zA-Z0-9\s]/)
+    .join(" "); // using a space adds a space between words, whereas using ("") would put all the words in the sentence together to form one long word
+}
+
