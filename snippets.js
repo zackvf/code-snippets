@@ -23,6 +23,22 @@ console.assert(1 === 2, 'yikes, try again');
 const p = document.querySelector('p');
 console.assert(p.classList.contains('lol'), 'wrong class buddy');
 
+// clearing
+console.clear();
+
+// viewing DOM elements
+console.log(p);
+console.dir(p);
+
+// grouping together
+dogs.forEach(dog => {
+  // console.group(`${dog.name}`); // auto-displays logged data
+  console.groupCollapsed(`${dog.name}`);
+  console.log(`this dog is named ${dog.name}`);
+  console.log(`${dog.name} is ${dog.age} human years old`);
+  console.log(`${dog.name} is ${dog.age * 7} dog years old`);
+  console.groupEnd(`${dog.name}`);
+});
 
 
 
