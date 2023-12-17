@@ -1,4 +1,32 @@
-// Recursion examples
+// Dev Console Commands
+// regular
+console.log('hello');
+
+// interpolated
+console.log('hello, i am a %s string', 'CRAZY');
+
+// styled
+console.log('%c hello, i am wacky text', 'font-size: 40px; background: red; text-shadow: 10px 10px 0 blue')
+
+// warning
+console.warn('LOOK BEHIND YOU');
+
+// error
+console.error('stop... error time');
+
+// info
+console.info('i am 6 feet and 1.5 inches tall');
+
+// testing values and attributes
+console.assert(1 === 2, 'yikes, try again');
+
+const p = document.querySelector('p');
+console.assert(p.classList.contains('lol'), 'wrong class buddy');
+
+
+
+
+// Recursion Examples
 
 // countdown function
 function countdown(n) {
@@ -36,7 +64,7 @@ function factorialize(num, factorial = 1) {
 
 
 
-// General examples
+// General Examples
 
 // basic calculator
 const calculator = {
