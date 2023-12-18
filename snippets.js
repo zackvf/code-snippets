@@ -1,4 +1,5 @@
 // Dev Console Commands
+
 // regular
 console.log('hello');
 
@@ -39,6 +40,21 @@ dogs.forEach(dog => {
   console.log(`${dog.name} is ${dog.age * 7} dog years old`);
   console.groupEnd(`${dog.name}`);
 });
+
+// counting
+console.count('test');
+console.count('test');
+console.count('test');
+console.count('test');
+
+// timing
+console.time('fetching data...');
+fetch('https://api.github.com/users/nofcaz')
+  .then(data => data.json())
+  .then(data => {
+    console.timeEnd('fetching data...');
+    console.log(data);
+  });
 
 
 
