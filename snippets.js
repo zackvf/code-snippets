@@ -49,7 +49,7 @@ console.count('test');
 
 // timing
 console.time('fetching data...');
-fetch('https://api.github.com/users/nofcaz')
+fetch('https://api.github.com/users/zackvf')
   .then(data => data.json())
   .then(data => {
     console.timeEnd('fetching data...');
