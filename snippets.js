@@ -252,3 +252,19 @@ function onlySentence(str) {
     .join(" "); // using a space adds a space between words, whereas using ("") would put all the words in the sentence together to form one long word
 }
 
+
+
+// Async Examples
+
+// convert the below promise into async function
+fetch('https://swapi.co/api/starships/9/')
+  .then(response => response.json())
+  .then(console.log)
+// result:
+async function fetchStarship() {
+  const response = await fetch('https://swapi.co/api/starships/9/')
+  const data = await response.json();
+  console.log(data);
+}
+
+// 
