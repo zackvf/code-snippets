@@ -256,6 +256,15 @@ function onlySentence(str) {
 
 // Async Examples
 
+// create a promise that resolves in 4 seconds and returns "success" string
+const promise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("success");
+  }, 4000)
+});
+
+// 
+
 // convert the below promise into async function
 fetch('https://swapi.co/api/starships/9/')
   .then(response => response.json())
@@ -266,5 +275,3 @@ async function fetchStarship() {
   const data = await response.json();
   console.log(data);
 }
-
-// 
