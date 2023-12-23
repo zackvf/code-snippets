@@ -263,7 +263,10 @@ const promise = new Promise((resolve, reject) => {
   }, 4000)
 });
 
-// 
+// run the above promise and make it console.log "success"
+promise.then(console.log)
+// or
+promise.then(resp => console.log(resp))
 
 // convert the below promise into async function
 fetch('https://swapi.co/api/starships/9/')
