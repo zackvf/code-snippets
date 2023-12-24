@@ -268,6 +268,13 @@ promise.then(console.log)
 // or
 promise.then(resp => console.log(resp))
 
+// make the above promise shorter with Promise.resolve()
+const promise = Promise.resolve(
+  setTimeout(() => {
+    console.log("success");
+  }, 4000)
+);
+
 // convert the below promise into async function
 fetch('https://swapi.co/api/starships/9/')
   .then(response => response.json())
