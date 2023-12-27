@@ -308,7 +308,21 @@ const getData = async function() {
       return response.json();
   }));
   console.log('users', users);
-  console.log('posta', posts);
+  console.log('posts', posts);
   console.log('albums', albums);
 }
 
+// add a try catch block to the above solution to catch errors
+const getData = async function() {
+  try {
+    const [ users, posts, albums ] = await Promise.all(urls.map(async function(url) {
+        const response = await fetch(url);
+        return response.json();
+    }));
+    console.log('users', users);
+    console.log('posts', posts);
+    console.log('albums', albums);
+  } catch (err) {
+    console.log('ooooooops', err);
+  }
+}
