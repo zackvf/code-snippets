@@ -298,7 +298,7 @@ const getData = async function() {
       fetch(url).then(resp => resp.json())
   ));
   console.log('users', users);
-  console.log('posta', posts);
+  console.log('posts', posts);
   console.log('albums', albums);
 }
 // result:
