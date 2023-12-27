@@ -323,6 +323,7 @@ const getData = async function() {
     console.log('posts', posts);
     console.log('albums', albums);
   } catch (err) {
-    console.log('ooooooops', err);
+    console.log('Error: ', err);
   }
 }
+
