@@ -286,6 +286,14 @@ async function fetchStarship() {
   console.log(data);
 }
 
+// use Promise.all to fetch people from Star Wars API (SWAPI)
+const urls = [
+  'https://swapi.co/api/people/1',
+  'https://swapi.co/api/people/2',
+  'https://swapi.co/api/people/3',
+  'https://swapi.co/api/people/4'
+]
+
 // rewrite the below async function to no longer user .then() from Promise
 const urls = [
   'https://jsonplaceholder.typicode.com/users',
