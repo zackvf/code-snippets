@@ -294,7 +294,7 @@ const urls = [
   'https://swapi.co/api/people/4'
 ]
 
-// 
+Promise.all()
 
 // rewrite the below async function to no longer user .then() from Promise
 const urls = [
