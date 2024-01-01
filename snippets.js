@@ -294,7 +294,9 @@ const urls = [
   'https://swapi.co/api/people/4'
 ]
 
-Promise.all()
+Promise.all(urls.map(url =>
+    fetch(url).then(people => people.json())
+))
 
 // rewrite the below async function to no longer user .then() from Promise
 const urls = [
