@@ -303,6 +303,7 @@ Promise.all(urls.map(url =>
         console.log('3', array[2])
         console.log('4', array[3])
       })
+    .catch(err => console.log('ughhhh fix it!', err));
 
 // rewrite the below async function to no longer user .then() from Promise
 const urls = [
