@@ -104,7 +104,7 @@ const keyCode = 'van';
 
 // This listener is the basis for a key logger if the array simply stored each pressed key instead of doing something with the entries like splicing
 window.addEventListener('keyup', (e) => {
-    console.log(e.key);
+    console.log("Key pressed: ", e.key);
     pressedKeys.push(e.key);
     // Splicing here trims the length of the array to the number of characters the key code has, while starting from the end of the array and going forward instead of from the beginning and going inwards
     pressedKeys.splice(-keyCode.length - 1, pressedKeys.length - keyCode.length);
