@@ -98,6 +98,23 @@ function factorialize(num, factorial = 1) {
 
 // General Examples
 
+// basic keylogger/keystroke evaluator
+const pressedKeys = [];
+const keyCode = 'van';
+
+// This listener is the basis for a key logger if the array simply stored each pressed key instead of doing something with the entries like splicing
+window.addEventListener('keyup', (e) => {
+    console.log(e.key);
+    pressedKeys.push(e.key);
+    // Splicing here trims the length of the array to the number of characters the key code has, while starting from the end of the array and going forward instead of from the beginning and going inwards
+    pressedKeys.splice(-keyCode.length - 1, pressedKeys.length - keyCode.length);
+    // 'If' here takes the string of the user input and checks for the key code inside of that joined string
+    if (pressedKeys.join('').includes(keyCode)) {
+        console.log('you win!');
+    }
+    console.log(pressedKeys);
+});
+
 // basic calculator
 const calculator = {
     add: function(x, y) {
