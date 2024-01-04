@@ -112,7 +112,7 @@ window.addEventListener('keyup', (e) => {
     if (pressedKeys.join('').includes(keyCode)) {
         console.log('you win!');
     }
-    console.log(pressedKeys);
+    console.log("Keys: ", pressedKeys);
 });
 
 // basic calculator
