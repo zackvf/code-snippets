@@ -291,13 +291,13 @@ function arrayChecker(arr, elem) {
 // JavaScript offers several built in methods that each iterate over arrays in slightly different ways to achieve different results (such as every(), forEach(), map(), etc.), however the technique which is most flexible and offers us the greatest amount of control is a simple for loop.
 // loop through an array of arrays to find ones that match the passed element, and only push the ones where the element is not found (filtering algorithm)
 function filteredArray(arr, elem) {
-  let newArr = [];
-  for (let i = 0; i < arr.length; i++) {
+  let newArr = []; // create a new, empty array to add elements to
+  for (let i = 0; i < arr.length; i++) { // continue looping through the user-passed array's 0...n elements until we reach the end of the array
     if (arr[i].indexOf(elem) == -1) {
-      newArr.push(arr[i]);
+      newArr.push(arr[i]); // if the current element of the user-passed array does not contain a valid index with the user-passed element, with the result of the comparison being -1 meaning outside of the array's 0...n elements, then push that element
     }
   }
-  return newArr;
+  return newArr; // return the new array after looping through the user-passed array
 }
 console.log(filteredArray([[3, 2, 3], [1, 6, 3], [3, 13, 26], [19, 3, 9]], 3)); // expected output: [] - all of the passed subarrays contain the element so all of them would get filtered out
 // ex. of five levels of depth in an array of arrays
