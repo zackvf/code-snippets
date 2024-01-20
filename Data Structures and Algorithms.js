@@ -327,7 +327,7 @@ function convertFtoC(fahrenheit) {
 // reverse a string using a for loop
 function reverseString(str) {
   let newStr = ""; // create a new, empty string
-  for (let i = str.length - 1; i >= 0; i--) {
+  for (let i = str.length - 1; i >= 0; i--) { // starting at the end of the user-passed string, decrement the counter until the loop reaches the beginning of the string
     // console.log(str[i]);
     newStr += str[i];
   }
