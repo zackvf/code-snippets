@@ -329,7 +329,7 @@ function reverseString(str) {
   let newStr = ""; // create a new, empty string
   for (let i = str.length - 1; i >= 0; i--) { // starting at the end of the user-passed string, decrement the counter until the loop reaches the beginning of the string
     // console.log(str[i]);
-    newStr += str[i];
+    newStr += str[i]; // same as writing newStr = newStr + str[i]
   }
   return newStr;
 }
