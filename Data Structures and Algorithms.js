@@ -331,7 +331,7 @@ function reverseString(str) {
     // console.log(str[i]);
     newStr += str[i]; // same as writing newStr = newStr + str[i], we just need to add each/every element at the index of the user-passed string onto our new string
   }
-  return newStr; // 
+  return newStr; // return the concatenated string of characters after looping through the entire user-passed string
 }
 // return the factorial of the provided integer, where the integer is greater than or equal to zero - this solution uses "head recursion" where all evaluation calcs are stored on the stack until the base case is reached
 function factorialize(num) {
