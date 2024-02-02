@@ -318,7 +318,7 @@ function arrayOfProps(obj) {
 // convert celsius temperature value to fahrenheit and vice versa
 function convertCtoF(celsius) { // create a new function, with a single parameter as a user-passed variable
   let fahrenheit = celsius * 9/5 + 32; // create a new variable that will contain the calculation including the user-passed variable (should be a number)
-  return fahrenheit;
+  return fahrenheit; // return the calculated variable
 }
 function convertFtoC(fahrenheit) {
   let celsius = fahrenheit - 32 * 5/9;
