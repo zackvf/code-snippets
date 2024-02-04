@@ -320,7 +320,7 @@ function convertCtoF(celsius) { // create a new function, with a single paramete
   let fahrenheit = celsius * 9/5 + 32; // create a new variable that will contain the calculation including the user-passed variable (should be a number)
   return fahrenheit; // return the calculated variable
 }
-function convertFtoC(fahrenheit) {
+function convertFtoC(fahrenheit) { // same function/variable as above but changes the calculation
   let celsius = fahrenheit - 32 * 5/9;
   return celsius;
 }
