@@ -322,7 +322,7 @@ function convertCtoF(celsius) { // create a new function, with a single paramete
 }
 function convertFtoC(fahrenheit) { // same function/variable as above but changes the calculation to capture celsius instead of fahrenheit
   let celsius = fahrenheit - 32 * 5/9; // create a new variable that will contain the calculation including the user-passed variable (should be a number)
-  return celsius; 
+  return celsius; // reutnr the calculated celsius variable
 }
 // reverse a string using a for loop
 function reverseString(str) {
