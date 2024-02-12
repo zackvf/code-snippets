@@ -335,7 +335,7 @@ function reverseString(str) {
 }
 // return the factorial of the provided integer, where the integer is greater than or equal to zero - this solution uses "head recursion" where all evaluation calcs are stored on the stack until the base case is reached
 function factorialize(num) { // create a new function, with a single user-passed parameter/variable
-  if (num <= 0) return 1;
+  if (num <= 0) return 1; // if the user-passed variable isn't a positive number, return out of the function
   return factorialize(num - 1) * num; // more elegant to say num * factorialize(num - 1)
 }
 factorialize(5); // expected output: 120
