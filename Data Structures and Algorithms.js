@@ -284,7 +284,7 @@ console.log(copyArray([el1, el2, el3], 3)); // expected output: [ [el1, el2, el3
 // check for the presense of an element in an array
 function arrayChecker(arr, elem) {
   if (arr.indexOf(elem) !== -1) { // if the index of the user-passed element is not equal to -1, meaning if the index is zero or a postive number, then it exists in the array
-    return true;
+    return true; // return true to exit the loop once the user-passed element is found in the user-passed array
   } 
   return false; // return false by default
 }
