@@ -832,8 +832,8 @@ Array.prototype.myFilter = function(callback) {
 // in functional programming, instead of using push() to add an array's elements onto a different array, use concat() to avoid mutating the array that will have values pushed onto it, as concat() returns a new array
 
 // ex. get the average rating of all of the movies directed by christopher nolan
-function getRating(watchList) {
-  let averageRating = watchList
+function getRating(watchList) { // create a new function with one user-passed parameter, being the array of films
+  let averageRating = watchList // create a new variable to contain the final filtered array
     .filter(movie => movie.Director === "Christopher Nolan")
     .map(movie => Number(movie.imdbRating))
     .reduce((total, rating) => total + rating) 
