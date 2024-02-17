@@ -834,7 +834,7 @@ Array.prototype.myFilter = function(callback) {
 // ex. get the average rating of all of the movies directed by christopher nolan
 function getRating(watchList) { // create a new function with one user-passed parameter, being the array of films
   let averageRating = watchList // create a new variable to contain the final filtered array
-    .filter(movie => movie.Director === "Christopher Nolan")
+    .filter(movie => movie.Director === "Christopher Nolan") // use filter() to create a shallow copy of the watchList array where you only get/see movies where the director is Christopher Nolan
     .map(movie => Number(movie.imdbRating))
     .reduce((total, rating) => total + rating) 
       / watchList.filter(movie => movie.Director === "Christopher Nolan").length;
