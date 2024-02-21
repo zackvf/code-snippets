@@ -325,7 +325,7 @@ function convertFtoC(fahrenheit) { // same function/variable as above but change
   return celsius; // reutnr the calculated celsius variable
 }
 // reverse a string using a for loop
-function reverseString(str) {
+function reverseString(str) { // create a new function with a user-passed string as the sole parameter
   let newStr = ""; // create a new, empty string
   for (let i = str.length - 1; i >= 0; i--) { // starting at the end of the user-passed string, decrement the counter until the loop reaches the beginning of the string
     // console.log(str[i]);
