@@ -341,7 +341,7 @@ function factorialize(num) { // create a new function with a single user-passed 
 factorialize(5); // expected output: 120
 // factorialize function using "tail recursion" for optimized stack performace/memory usage
 function factorialize(num, factorial = 1) { // create a new function with two parameters; a user-passed number (to be factorialized) and a factorial variable with a default value of 1
-  if (num <= 0) return factorial;
+  if (num <= 0) return factorial; // if the current number is less than or equal to zero, return the current factorial (exit the function)
   return factorialize(num - 1, factorial * num); // more elegant to say num * factorialize(num - 1)
 }
 // factorialize function using a for loop
