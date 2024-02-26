@@ -348,7 +348,7 @@ function factorialize(num, factorial = 1) { // create a new function with two pa
 function factorialize(num) { // create a new function with a single user-passed parameter/variable
   let product = 1; // set a new "product" variable to 1 by default
   for (let i = 2; i <= num; i++) { // starting at 2 initially, loop through the user-passed 'num' parameter/variable, incrementing by one each loop iteration until 'i' is greater than 'num'
-    product *= i;
+    product *= i; // same thing as saying product = product * i, where each loop iteration sets the product variable to the calculation of the multiplication of the current value of 'product' and the current value of 'i'
   }
   return product;
 }
