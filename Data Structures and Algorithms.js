@@ -350,7 +350,7 @@ function factorialize(num) { // create a new function with a single user-passed 
   for (let i = 2; i <= num; i++) { // starting at 2 initially, loop through the user-passed 'num' parameter/variable, incrementing by one each loop iteration until 'i' is greater than 'num'
     product *= i; // same thing as saying product = product * i, where each loop iteration sets the product variable to the calculation of the multiplication of the current value of 'product' and the current value of 'i'
   }
-  return product;
+  return product; // return the final 'product' variable after looping through all the values of 'num'
 }
 // find the longest word in a string
 function findLongestWordLength(str) {
