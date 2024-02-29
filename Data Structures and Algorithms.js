@@ -353,7 +353,7 @@ function factorialize(num) { // create a new function with a single user-passed 
   return product; // return the final 'product' variable after looping through all the values of 'num'
 }
 // find the longest word in a string
-function findLongestWordLength(str) {
+function findLongestWordLength(str) { // create a new function with a single, user-passed parameter/variable of a string
   let wordsArr = str.split(' ');
   let longestWord = 0;
    for (const word in wordsArr) { // can also be written as for (let i = 0; i < wordsArr.length; i++)
@@ -364,7 +364,7 @@ function findLongestWordLength(str) {
   return longestWord;
 }
 // return largest number among nested arrays - procedurally
-function largestOfFour(arr) {
+function largestOfFour(arr) { 
   const finalList = [];
   for (let i = 0; i < arr.length; i++) {
     let largestNumber = arr[i][0];
