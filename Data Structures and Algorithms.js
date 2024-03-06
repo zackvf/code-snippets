@@ -361,7 +361,7 @@ function findLongestWordLength(str) { // create a new function with a single, us
        longestWord = wordsArr[word].length; // can also be written as longestword = wordsArr[i].length
      }
   }
-  return longestWord;
+  return longestWord; // after looping through the array of words from the user-passed string, return the word with the most letters/characters
 }
 // return largest number among nested arrays - procedurally
 function largestOfFour(arr) { 
