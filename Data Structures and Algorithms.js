@@ -358,10 +358,10 @@ function findLongestWordLength(str) { // create a new function with a single, us
   let longestWord = 0; // create a new variable to hold the longest word
    for (const word in wordsArr) { // can also be written as for (let i = 0; i < wordsArr.length; i++)
      if (wordsArr[word].length > longestWord) { // can also be written as if (wordsArr[i].length > longestWord)
-       longestWord = wordsArr[word].length; // can also be written as longestword = wordsArr[i].length
+       longestWord = wordsArr[word].length; // can also be written as longestword = wordsArr[i].length; after comparing the current wordsArr index's word character count with the current count of the longestWord variable, set the longestWord count to the wordsArr index's word character count if it's larger
      }
   }
-  return longestWord; // after looping through the array of words from the user-passed string, return the word with the most letters/characters
+  return longestWord; // after looping through the array of words from the user-passed string, return the number of characters of the word with the most letters/characters
 }
 // return largest number among nested arrays - procedurally
 function largestOfFour(arr) { 
