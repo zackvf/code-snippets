@@ -355,7 +355,7 @@ function factorialize(num) { // create a new function with a single user-passed 
 // find the longest word in a string
 function findLongestWordLength(str) { // create a new function with a single, user-passed parameter/variable of a string
   let wordsArr = str.split(' '); // create a new 'wordsArr' variable that stores the user-passed string variable, but split on the spaces between the words in the string
-  let longestWord = 0; // create a new variable to hold the longest word
+  let longestWord = 0; // create a new variable to hold the longest word's character count
    for (const word in wordsArr) { // can also be written as for (let i = 0; i < wordsArr.length; i++)
      if (wordsArr[word].length > longestWord) { // can also be written as if (wordsArr[i].length > longestWord)
        longestWord = wordsArr[word].length; // can also be written as longestword = wordsArr[i].length; after comparing the current wordsArr index's word character count with the current count of the longestWord variable, set the longestWord count to the wordsArr index's word character count if it's larger
