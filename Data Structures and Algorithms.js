@@ -364,8 +364,8 @@ function findLongestWordLength(str) { // create a new function with a single, us
   return longestWord; // after looping through the array of words from the user-passed string, return the number of characters of the word with the most letters/characters
 }
 // return largest number among nested arrays - procedurally
-function largestOfFour(arr) { // create a new function with a single, user-passed array parameter
-  const finalList = [];
+function largestOfFour(arr) { // create a new function with a single, user-passed array parameter, which is expected to be a nested array of arrays
+  const finalList = []; // create a new, empty array variable to hold the largest number from each nested array
   for (let i = 0; i < arr.length; i++) {
     let largestNumber = arr[i][0];
     for (let j = 1; j < arr[i].length; j++) {
