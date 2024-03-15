@@ -369,8 +369,8 @@ function largestOfFour(arr) { // create a new function with a single, user-passe
   for (let i = 0; i < arr.length; i++) { // loop through the user-passed array of arrays, starting at the first nested array and incrementing by one each loop until the length of the user-passed array has been reached
     let largestNumber = arr[i][0]; // with each loop iteration, set the current largest number to the current nested array's first value
     for (let j = 1; j < arr[i].length; j++) { // loop through each of the elements in the nested arrays until you reach the end of the array of nested arrays
-      if (arr[i][j] > largestNumber) {
-        largestNumber = arr[i][j];
+      if (arr[i][j] > largestNumber) { // compare the current nested array's current element with the current largest number, and if it's greater...
+        largestNumber = arr[i][j]; // ...then set the current largest number to that element
       }
     }
     finalList[i] = largestNumber;
