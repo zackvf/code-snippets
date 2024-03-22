@@ -373,10 +373,10 @@ function largestOfFour(arr) { // create a new function with a single, user-passe
         largestNumber = arr[i][j]; // ...then set the current largest number to that element
       }
     }
-    finalList[i] = largestNumber;
+    finalList[i] = largestNumber; // set the current largest number as the current array index of the final list to begin a new comparison to on the next loop
   }
 
-  return finalList;
+  return finalList; // once looped through all nested arrays, return the ultimate list of largest numbers among each
 }
 // check if a string ends with the given target string - declartively
 function confirmEnding(str, target) {
