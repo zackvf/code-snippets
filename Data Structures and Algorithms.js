@@ -379,8 +379,8 @@ function largestOfFour(arr) { // create a new function with a single, user-passe
   return finalList; // once looped through all nested arrays, return the ultimate list of largest numbers among each
 }
 // check if a string ends with the given target string - declartively
-function confirmEnding(str, target) { // create a new function with two parameters, being the string being checked against and the "target" string to compare against
-  return str.slice(str.length - target.length) === target;
+function confirmEnding(str, target) { // create a new function with two parameters, being the string being checked against and the "target" string to checked for at the end
+  return str.slice(str.length - target.length) === target; // return true or false based on the Array.slice()'d value of the string's length with the target string's length subtracted from it, compared against the target string itself
 }
 // repeat a given string n times
 // for loop version
