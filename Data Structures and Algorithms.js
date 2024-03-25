@@ -1,5 +1,5 @@
 // mutate an array declared with const - using const declaration only prevents reassignment of the variable identifier, where the elements of the array/object are still mutable
-array = [a, b, c]
+array = [a, b, c] // set a new variable named "array" to the array of elements a/b/c
 array[0] = c;
 array[1] = a;
 array[2] = b;
