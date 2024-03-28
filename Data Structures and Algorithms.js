@@ -11,7 +11,7 @@ Object.freeze(obj); // outdated/obsolete method of doing so
 const function = arg => arg + 1; // create a new function with a single "arg" parameter that returns the value of the arg value plus one (assumes the arg value passed is a number/integer)
 
 // multiple arguments in an anonymous function
-const arrConcat = (arr1, arr2) => arr1.concat(arr2);
+const arrConcat = (arr1, arr2) => arr1.concat(arr2); // create a new function that takes two array arguments and returns a new array with the second array's elements added onto the first array's elements, subsequently
 
 // default parameters in an anonymous function
 const increment = (number, value = 1) => number + value;
