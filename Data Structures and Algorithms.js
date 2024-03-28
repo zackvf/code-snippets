@@ -5,10 +5,10 @@ array[1] = a; // set the second element of the "array" to the value of the first
 array[2] = b; // set the third element of the "array" to the value of the second element "b" from the initial array
 
 // prevent object mutation - can be called within a function
-Object.freeze(obj);
+Object.freeze(obj); // outdated/obsolete method of doing so
 
 // no need for parantheses when passing a single argument to an anonymous function with arrow syntax
-const function = arg => arg + 1;
+const function = arg => arg + 1; // create a new function with a single "arg" parameter that returns the value of the arg value plus one (assumes the arg value passed is a number/integer)
 
 // multiple arguments in an anonymous function
 const arrConcat = (arr1, arr2) => arr1.concat(arr2);
