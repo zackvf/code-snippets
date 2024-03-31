@@ -14,7 +14,7 @@ const function = arg => arg + 1; // create a new function with a single "arg" pa
 const arrConcat = (arr1, arr2) => arr1.concat(arr2); // create a new function that takes two array arguments and returns a new array with the second array's elements added onto the first array's elements, subsequently
 
 // default parameters in an anonymous function
-const increment = (number, value = 1) => number + value;
+const increment = (number, value = 1) => number + value; // create a new function that takes two arguments, the first being a user-passed number (expects an integer) to be incremented on and the second being a user-passed number (expects an integer) to be used as the incrementer value, with a default value of 1 to be used if the user doesn't pass their own value argument
 
 // using the 'rest' parameter in a function declaration
 const sum = (...args) => {
