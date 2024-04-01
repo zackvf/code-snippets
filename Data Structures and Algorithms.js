@@ -17,7 +17,7 @@ const arrConcat = (arr1, arr2) => arr1.concat(arr2); // create a new function th
 const increment = (number, value = 1) => number + value; // create a new function that takes two arguments, the first being a user-passed number (expects an integer) to be incremented on and the second being a user-passed number (expects an integer) to be used as the incrementer value, with a default value of 1 to be used if the user doesn't pass their own value argument
 
 // using the 'rest' parameter in a function declaration
-const sum = (...args) => {
+const sum = (...args) => { // create a new function that takes the "rest of" the elements from an array, meaning the array's elements get spread into a new array to be used inside of the function body
   let total = 0;
   for (let i = 0; i < args.length; i++) {
     total += args[i];
