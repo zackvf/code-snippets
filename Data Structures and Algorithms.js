@@ -18,7 +18,7 @@ const increment = (number, value = 1) => number + value; // create a new functio
 
 // using the 'rest' parameter in a function declaration
 const sum = (...args) => { // create a new function that takes the "rest of" the elements from an array, meaning the array's elements get spread into a new array to be used inside of the function body
-  let total = 0;
+  let total = 0; // set a new variable to an initial value of 0, to be used to capture the sum of the elements from the user-passed array
   for (let i = 0; i < args.length; i++) {
     total += args[i];
   }
