@@ -22,7 +22,7 @@ const sum = (...args) => { // create a new function that takes the "rest of" the
   for (let i = 0; i < args.length; i++) { // using a for loop, while the current loop index is less than the length of the user-passed array, meaning the loop index hasn't reached the final element of the array, increment the loop index by 1
     total += args[i]; // each iteration of the loop, increase the total value by the current total in addition to the current element of the user-passed array
   }
-  return total;
+  return total; // after the loop has gone through every element of the user-passed array, return the sum total of all of the array's elements
 }
 
 // destructing assignment to extract object property values
