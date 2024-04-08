@@ -26,12 +26,12 @@ const sum = (...args) => { // create a new function that takes the "rest of" the
 }
 
 // destructing assignment to extract object property values
-const HIGH_TEMPERATURES = {
+const HIGH_TEMPERATURES = { // create a new object with three properties, all three being integers
   yesterday: 75,
   today: 77,
   tomorrow: 80
 };
-const { today, tomorrow } = HIGH_TEMPERATURES;
+const { today, tomorrow } = HIGH_TEMPERATURES; // destructure the 'today' and 'tomorrow' props from the original 'high_temperatures' object, or in other words, create a second new object using only the 'today' and 'tomorrow' props from the original object
 
 // which is the same as saying
 const today = HIGH_TEMPERATURES.today;
