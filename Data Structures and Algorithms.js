@@ -31,15 +31,14 @@ const HIGH_TEMPERATURES = { // create a new object with three properties, all th
   today: 77,
   tomorrow: 80
 };
-const { today, tomorrow } = HIGH_TEMPERATURES; // destructure the 'today' and 'tomorrow' props from the original 'high_temperatures' object, or in other words, create a second new object using only the 'today' and 'tomorrow' props from the original object
+const { today, tomorrow } = HIGH_TEMPERATURES; // destructure the 'today' and 'tomorrow' props from the original 'high_temperatures' object, or in other words, create two new variables using only the 'today' and 'tomorrow' props from the original object
 
 // which is the same as saying
 const today = HIGH_TEMPERATURES.today;
 const tomorrow = HIGH_TEMPERATURES.tomorrow;
 
 // and variables can be named differently
-const { today: highToday, tomorrow: highTomorrow } = HIGH_TEMPERATURES;
-
+const { today: highToday, tomorrow: highTomorrow } = HIGH_TEMPERATURES; // while creating two new variables using only the 'today' and 'tomorrow' props from the orignal object, rename the props/variables at the same time so as to more easily differentiate between existing object props and new variables 
 
 // destructure an array to swap variable values to each other - remember that you can't redeclare the variable identifiers with let or const
 let a = 1, b = 2;
