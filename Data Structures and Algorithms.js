@@ -46,7 +46,7 @@ let a = 1, b = 2; // declare two new variables on the same line for efficiency
 
 // destructuring an array with rest param - remove first two elements of an array and return the remaining sliced array
 function removeFirstTwo(list) { // create a new function that takes one argument, expecting an array
-  let [a, b, ...arr] = list; // first two values can also be written as let a = list[0], let b = list[1] - 
+  let [a, b, ...arr] = list; // first two values can also be written as let a = list[0], let b = list[1]
   return arr;
 }
 
