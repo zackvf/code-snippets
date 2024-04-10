@@ -41,12 +41,12 @@ const tomorrow = HIGH_TEMPERATURES.tomorrow;
 const { today: highToday, tomorrow: highTomorrow } = HIGH_TEMPERATURES; // while creating two new variables using only the 'today' and 'tomorrow' props from the orignal object, rename the props/variables at the same time so as to more easily differentiate between existing object props and new variables 
 
 // destructure an array to swap variable values to each other - remember that you can't redeclare the variable identifiers with let or const
-let a = 1, b = 2;
-[b, a] = [a, b];
+let a = 1, b = 2; // declare two new variables on the same line for efficiency
+[b, a] = [a, b]; // set the second variable's value to the first variable's initial value, and vice versa
 
 // destructuring an array with rest param - remove first two elements of an array and return the remaining sliced array
 function removeFirstTwo(list) { // create a new function that takes one argument, expecting an array
-  let [a, b, ...arr] = list; // first two values can also be written as let a = list[0], let b = list[1]
+  let [a, b, ...arr] = list; // first two values can also be written as let a = list[0], let b = list[1] - 
   return arr;
 }
 
