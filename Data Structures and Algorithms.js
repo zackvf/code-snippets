@@ -44,13 +44,11 @@ const { today: highToday, tomorrow: highTomorrow } = HIGH_TEMPERATURES; // while
 let a = 1, b = 2;
 [b, a] = [a, b];
 
-
 // destructuring an array with rest param - remove first two elements of an array and return the remaining sliced array
 function removeFirstTwo(list) {
   let [a, b, ...arr] = list; // first two values can also be written as let a = list[0], let b = list[1]
   return arr;
 }
-
 
 // destructuring an object's props as fn params
 const stats = {
