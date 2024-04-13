@@ -51,7 +51,7 @@ function removeFirstTwo(list) { // create a new function that takes one argument
 }
 
 // destructuring an object's props as function parameters
-const stats = {
+const stats = { // create a new object "stats" that contains several properties, assumed to be integers
   max: 56.78,
   standard_deviation: 4.34,
   median: 34.54,
