@@ -50,7 +50,7 @@ function removeFirstTwo(list) { // create a new function that takes one argument
   return arr; // return only the "rest" of the elements from the user-passed array, ignoring the first two elements that have already been assigned to variables "a" and "b"
 }
 
-// destructuring an object's props as fn params
+// destructuring an object's props as function parameters
 const stats = {
   max: 56.78,
   standard_deviation: 4.34,
