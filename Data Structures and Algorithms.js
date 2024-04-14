@@ -60,7 +60,7 @@ const stats = { // create a new object "stats" that contains basic statistic pro
   average: 35.85
 };
 
-const half = ({ max, min }) => (max + min) / 2.0; // create a new function that takes the two "maximum" and "minimum" properties from the 'stats' object as arguments
+const half = ({ max, min }) => (max + min) / 2.0; // create a new function that takes the "maximum" and "minimum" properties from the 'stats' object as arguments and divide the sum total of the two props by 2
 
 // which is the same as saying
 const half = (stats) => (stats.max + stats.min) / 2.0;
