@@ -50,7 +50,7 @@ function removeFirstTwo(list) { // create a new function that takes one argument
   return arr; // return only the "rest" of the elements from the user-passed array, ignoring the first two elements that have already been assigned to variables "a" and "b"
 }
 
-// destructuring an object's props as function parameters
+// destructuring an object's props as function parameters/arguments
 const stats = { // create a new object "stats" that contains basic statistic props
   max: 56.78,
   standard_deviation: 4.34,
@@ -60,7 +60,7 @@ const stats = { // create a new object "stats" that contains basic statistic pro
   average: 35.85
 };
 
-const half = ({ max, min }) => (max + min) / 2.0;
+const half = ({ max, min }) => (max + min) / 2.0; // create a new function that takes the two "maximum" and "minimum" properties from the 'stats' object as arguments
 
 // which is the same as saying
 const half = (stats) => (stats.max + stats.min) / 2.0;
