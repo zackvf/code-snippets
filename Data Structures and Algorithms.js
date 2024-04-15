@@ -72,6 +72,7 @@ const result = {
   failure: ["no-var", "var-on-top", "linebreak"],
   skipped: ["no-extra-semi", "no-dup-keys"]
 };
+
 function makeList(arr) {
   const failureItems = [];
   for (let i = 0; i < result.failure.length; i++) {
@@ -82,12 +83,10 @@ function makeList(arr) {
 
 const failuresList = makeList(result.failure);
 
-
 // object property shorthand with object literals to create and return an object with name, age and gender properties
 const createPerson = (name, age, gender) => {
   return {name, age, gender};
 };
-
 
 // In ES5, an object can be created by defining a constructor function and using the new keyword to instantiate the object.
 // In ES6, a class declaration has a constructor method that is invoked with the new keyword. If the constructor method is not explicitly defined, then it is implicitly defined with no arguments.
@@ -105,7 +104,6 @@ console.log(carrot.name); // expected output: 'carrot'
 class Vegetable {
   console.log("This is a vegetable class.")
 }
-
 
 // using getters and setters to control object prop access
 // You can obtain values from an object and set the value of a property within an object.
@@ -131,7 +129,6 @@ const thermos = new Thermostat(76); // instantiate a new thermostat object with 
 let temp = thermos.temperature; // expected output: 24.44 in Celsius
 thermos.temperature = 26;
 temp = thermos.temperature; // expected output: 26 in Celsius
-
 
 // easily import all contents of a module as a new object in the file using the contents
 // ex. 1 - exporting the functions needed in another file/module
