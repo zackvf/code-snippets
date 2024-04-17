@@ -379,9 +379,9 @@ function confirmEnding(str, target) { // create a new function with two paramete
 // repeat a given string n times
 // for loop version
 function repeatString(str, num) { // create a new function that takes two arguments, being a string and a number (assumed to be an integer)
-  let newStr = ""; // create a new variable to contain the final repeated string
-  for (let i = 0; i < num; i++) {
-    newStr += str;
+  let newStr = ""; // create a new variable to contain the repeated string
+  for (let i = 0; i < num; i++) { // loop through the total number, incrementing by one each iteration of the loop
+    newStr += str; // with each iteration of the loop, add current 
   }
   return newStr;
 }
