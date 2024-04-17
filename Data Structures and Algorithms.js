@@ -381,7 +381,7 @@ function confirmEnding(str, target) { // create a new function with two paramete
 function repeatString(str, num) { // create a new function that takes two arguments, being a string and a number (assumed to be an integer)
   let newStr = ""; // create a new variable to contain the repeated string
   for (let i = 0; i < num; i++) { // loop through the total user-passed number argument, incrementing by one each iteration of the loop until the number itself is reached
-    newStr += str; // with each iteration of the loop, add the current 
+    newStr += str; // with each iteration of the loop, set the current new, repeated string to contain it's current value with the user-passed string argument added onto it
   }
   return newStr;
 }
