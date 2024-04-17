@@ -383,7 +383,7 @@ function repeatString(str, num) { // create a new function that takes two argume
   for (let i = 0; i < num; i++) { // loop through the total user-passed number argument, incrementing by one each iteration of the loop until the number itself is reached
     newStr += str; // with each iteration of the loop, set the current new, repeated string to contain it's current value with the user-passed string argument added onto it
   }
-  return newStr;
+  return newStr; // after final iteration of the loop, return the final, repeated string
 }
 // recursion version
 function repeatString(str, num) {
