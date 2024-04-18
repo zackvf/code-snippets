@@ -387,7 +387,7 @@ function repeatString(str, num) { // create a new function that takes two argume
 }
 // recursion version
 function repeatString(str, num) {
-  if (num < 1) {
+  if (num < 1) { // set the recursion loop's base case to the user-passed num argument being less than one, meaning the loop has reached the final iteration
     return "";
   } else {
     return str + repeatString(str, num - 1);
