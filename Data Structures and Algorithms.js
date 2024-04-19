@@ -397,6 +397,7 @@ function repeatString(str, num) {
 function repeatString(str, num) {
   return num > 0 ? str + repeatString(str, num - 1) : '';
 }
+
 // truncate a string if it's longer than the user-supplied max string length
 function truncateString(str, num) {
   if (str.length > num) {
@@ -404,6 +405,7 @@ function truncateString(str, num) {
   }
   return str;
 }
+
 // look through an array and return the first element that passes a truth test, otherwise return 'undefined'
 function findElement(arr, func) {
   let num = 0;
