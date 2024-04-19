@@ -399,7 +399,7 @@ function repeatString(str, num) {
 }
 
 // truncate a string if it's longer than the user-supplied max string length
-function truncateString(str, num) {
+function truncateString(str, num) { // create a new function with two arguments, being a string and a number assumed to be an integer
   if (str.length > num) {
     return str.slice(0, num) + "...";
   }
