@@ -390,7 +390,7 @@ function repeatString(str, num) {
   if (num < 1) { // set the recursion loop's base case to the user-passed num argument being less than one, meaning the loop has reached the final iteration
     return ""; // if the base case is reached, return an empty string, which wouldn't be included in the final repeated string
   } else {
-    return str + repeatString(str, num - 1);
+    return str + repeatString(str, num - 1); // until the base case is reached, add the string onto itself, decrementing the user-passed num argument by one each loop
   }
 }
 // alternate recursion version
