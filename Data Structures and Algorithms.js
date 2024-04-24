@@ -400,10 +400,10 @@ function repeatString(str, num) {
 
 // truncate a string if it's longer than the user-supplied max string length
 function truncateString(str, num) { // create a new function with two arguments, being a string and a number assumed to be an integer
-  if (str.length > num) {
-    return str.slice(0, num) + "...";
+  if (str.length > num) { // if the length of the user-passed string is longer than the user-passed number...
+    return str.slice(0, num) + "..."; // ...return a new shallow-copied array of the string, starting at the first element (or letter) of the string and ending at the element with an index matching the user-passed number, adding on an ellipsis at the end of the newly truncated string...
   }
-  return str;
+  return str; // ...otherwise return the string as is
 }
 
 // look through an array and return the first element that passes a truth test, otherwise return 'undefined'
