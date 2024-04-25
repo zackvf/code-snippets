@@ -407,7 +407,7 @@ function truncateString(str, num) { // create a new function with two arguments,
 }
 
 // look through an array and return the first element that passes a truth test, otherwise return 'undefined'
-function findElement(arr, func) {
+function findElement(arr, func) { // create a new function that accepts two arguments, the first being an array of any elements and an empty function to be used as the method for getting a true/false value
   let num = 0;
   for (let i = 0; i < arr.length; i++) {
     num = arr[i];
