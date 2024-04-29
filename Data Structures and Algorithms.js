@@ -415,7 +415,7 @@ function findElement(arr, func) { // create a new function that accepts two argu
       return num; // ...then return that array element and exit the loop and finder function
     }
   }
-  return undefined; 
+  return undefined; // if no array element is found that passes as true, return undefined to exit the finder function
 }
 // check if a user-passed value is a boolean primitive (true/false)
 function isBool(value) {
