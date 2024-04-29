@@ -410,7 +410,7 @@ function truncateString(str, num) { // create a new function with two arguments,
 function findElement(arr, func) { // create a new function that accepts two arguments, the first being an array of any elements and an empty function to be used as the method for getting a true/false value
   let num = 0; // set up an empty variable to capture the truthy element post-loop
   for (let i = 0; i < arr.length; i++) { // loop through the user-passed array until the end of the array is reached, incrementing by one each loop iteration
-    num = arr[i];
+    num = arr[i]; // each loop iteration, set the current array element to the num being checked
     if (func(num)) {
       return num;
     }
