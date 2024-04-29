@@ -411,11 +411,11 @@ function findElement(arr, func) { // create a new function that accepts two argu
   let num = 0; // set up an empty variable to capture the truthy element post-loop
   for (let i = 0; i < arr.length; i++) { // loop through the user-passed array until the end of the array is reached, incrementing by one each loop iteration
     num = arr[i]; // each loop iteration, set the current array element to the num being checked
-    if (func(num)) {
-      return num;
+    if (func(num)) { // using the generic empty function to perform the validation, if the current array element is true...
+      return num; // ...then return that array element and exit the loop and finder function
     }
   }
-  return undefined;
+  return undefined; 
 }
 // check if a user-passed value is a boolean primitive (true/false)
 function isBool(value) {
