@@ -419,7 +419,7 @@ function findElement(arr, func) { // create a new function that accepts two argu
 }
 // check if a user-passed value is a boolean primitive (true/false)
 function isBool(value) { // create a new function that takes one argument, being any value, or object, truly, of any type
-  return bool === true || bool === false ? true : false;
+  return bool === true || bool === false ? true : false; // using a ternary operator, return true or false based on the value type
 }
 // bool checker alternate version
 function isBool(value) {
