@@ -422,7 +422,7 @@ function isBool(value) { // create a new function that takes one argument, being
   return bool === true || bool === false ? true : false; // using a ternary operator, return true or false based on the value type
 }
 // bool checker alternate version
-function isBool(value) {
+function isBool(value) { // create a new function that takes one argument, being any value/object
   return typeof value === "boolean";
 }
 // capitalize the first letter in each word in a string to achieve 'title case'
