@@ -423,7 +423,7 @@ function isBool(value) { // create a new function that takes one argument, being
 }
 // bool checker alternate version
 function isBool(value) { // create a new function that takes one argument, being any value/object
-  return typeof value === "boolean";
+  return typeof value === "boolean"; // return the type of the value
 }
 // capitalize the first letter in each word in a string to achieve 'title case'
 function titleCase(str) {
