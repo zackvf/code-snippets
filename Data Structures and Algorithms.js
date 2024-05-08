@@ -426,7 +426,7 @@ function isBool(value) { // create a new function that takes one argument, being
   return typeof value === "boolean"; // return the type of the value
 }
 // capitalize the first letter in each word in a string to achieve 'title case'
-function titleCase(str) {
+function titleCase(str) { // create a new function that takes one argument, being a string of any length of characters
   const strArr = str.split(" ");
   let newTitle = [];
   for (let letter in strArr) {
