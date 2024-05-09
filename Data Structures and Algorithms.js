@@ -427,7 +427,7 @@ function isBool(value) { // create a new function that takes one argument, being
 }
 // capitalize the first letter in each word in a string to achieve 'title case'
 function titleCase(str) { // create a new function that takes one argument, being a string of any length of characters
-  const strArr = str.split(" ");
+  const strArr = str.split(" "); // 
   let newTitle = [];
   for (let letter in strArr) {
     newTitle[letter] = strArr[letter][0].toUpperCase() + strArr[letter].slice(1).toLowerCase();
