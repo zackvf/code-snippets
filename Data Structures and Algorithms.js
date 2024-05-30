@@ -27,7 +27,7 @@ const sum = (...args) => { // create a new function that takes the "rest of" the
 
 // destructing assignment to extract object property values
 const HIGH_TEMPERATURES = { // create a new object with three properties, all three being integers
-  yesterday: 75,
+  yesterday: 75, // test update
   today: 77,
   tomorrow: 80
 };
