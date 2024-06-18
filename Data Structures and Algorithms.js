@@ -67,7 +67,7 @@ const half = (stats) => (stats.max + stats.min) / 2.0;
 
 
 // creating an array of strings of template literals by looping through a nested array in an object
-const result = {
+const result = { // create the object to iterate over, using three properties
   success: ["max-length", "no-amd", "prefer-arrow-functions"],
   failure: ["no-var", "var-on-top", "linebreak"],
   skipped: ["no-extra-semi", "no-dup-keys"]
