@@ -66,7 +66,6 @@ const half = ({ max, min }) => (max + min) / 2.0; // create a new function that 
 // which is the same as saying
 const half = (stats) => (stats.max + stats.min) / 2.0;
 
-
 // creating an array of strings of template literals by looping through a nested array in an object
 const result = { // create the object to iterate over, using three key-value pairs of nested arrays
   success: ["max-length", "no-amd", "prefer-arrow-functions"],
