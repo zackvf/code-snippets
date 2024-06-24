@@ -148,13 +148,11 @@ import * as stringFunctions from "./string_functions.js"; // in this case, it's 
 stringFunctions.uppercaseString("hello");
 stringFunctions.lowercaseString("WORLD!");
 
-
 // export default - Since export default is used to declare a fallback value for a module or file, you can only have one value be a default export in each module or file. Additionally, you cannot use export default with var, let, or const
 // example of exporting a single function as it's defined
 export default function subtract(x, y) {
   return x - y;
 }
-
 
 // promises - When the task completes, you either fulfill your promise or fail to do so. Promise is a constructor function, so you need to use the new keyword to create one. It takes a function, as its argument, with two parameters - resolve and reject. These are methods used to determine the outcome of the promise
 // A promise has three states: pending, fulfilled, and rejected. The resolve and reject parameters given to the promise argument are used to do complete the promise and exit a pending state. resolve is used when you want your promise to succeed, and reject is used when you want it to fail. These are methods that take an argument
