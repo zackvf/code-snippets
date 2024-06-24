@@ -175,7 +175,6 @@ makeServerRequest.catch(error => {
   console.log(error);
 });
 
-
 // regex
 /specific text/ // search for a specific word/text block
 /specific Text/i // i is case insensitivity
