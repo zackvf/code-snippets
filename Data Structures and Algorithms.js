@@ -74,7 +74,7 @@ const result = { // create the object to iterate over, using three key-value pai
 };
 
 function makeList(arr) { // create a new function that accepts one parameter/argument, being an array
-  const failureItems = [];
+  const failureItems = []; // create a new, empty array which will contain the list items
   for (let i = 0; i < result.failure.length; i++) {
       failureItems.push(`<li class="text-warning">${result.failure[i]}</li>`)
   }
