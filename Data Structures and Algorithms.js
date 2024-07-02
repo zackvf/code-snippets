@@ -73,7 +73,7 @@ const result = { // create the object to iterate over, using three key-value pai
   skipped: ["no-extra-semi", "no-dup-keys"]
 };
 
-function makeList(arr) { // create a new function that accepts one parameter/argument, being an array
+function makeList(arr) { // create a new function that accepts one parameter/argument, being an array of items to turn into an html-based list
   const failureItems = []; // create a new, empty array which will contain the list items
   for (let i = 0; i < result.failure.length; i++) { // loop through the 
       failureItems.push(`<li class="text-warning">${result.failure[i]}</li>`)
