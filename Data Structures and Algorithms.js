@@ -75,7 +75,7 @@ const result = { // create the object to iterate over, using three key-value pai
 
 function makeList(arr) { // create a new function that accepts one parameter/argument, being an array of items to turn into an html-based list
   const failureItems = []; // create a new, empty array which will contain the list items
-  for (let i = 0; i < result.failure.length; i++) { // loop through the 
+  for (let i = 0; i < result.failure.length; i++) { // loop through the items in the current list until the end of the list is reached
       failureItems.push(`<li class="text-warning">${result.failure[i]}</li>`)
   }
   return failureItems;
