@@ -78,7 +78,7 @@ function makeList(arr) { // create a new function that accepts one parameter/arg
   for (let i = 0; i < result.failure.length; i++) { // loop through the items in the current list until the end of the list is reached
       failureItems.push(`<li class="text-warning">${result.failure[i]}</li>`) // set each next user-passed array element as a new list item until the array elements are all added
   }
-  return failureItems;
+  return failureItems; // once the user-passed array is looped through, return the total list of result failure list elements
 }
 
 const failuresList = makeList(result.failure);
