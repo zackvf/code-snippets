@@ -81,7 +81,7 @@ function makeList(arr) { // create a new function that accepts one parameter/arg
   return failureItems; // once the user-passed array is looped through, return the total list of result failure list elements
 }
 
-const failuresList = makeList(result.failure); // create a new variable that calls the method to create a new list of list items
+const failuresList = makeList(result.failure); // create a new variable that stores the returned value from the method call that creates a new list of HTML list items
 
 // object property shorthand with object literals to create and return an object with name, age and gender properties
 const createPerson = (name, age, gender) => {
