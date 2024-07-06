@@ -304,7 +304,6 @@ function arrayOfProps(obj) {
   return Object.keys(obj); // returns an array
 }
 
-
 // algorithms
 // convert celsius temperature value to fahrenheit and vice versa
 function convertCtoF(celsius) { // create a new function, with a single parameter as a user-passed variable
