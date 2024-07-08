@@ -431,7 +431,7 @@ function titleCase(str) { // create a new function that takes one argument, bein
   return newTitle.join(" ");
 }
 // alternate version of title case function
-function titleCase(str) {
+function titleCase(str) { // create a new function that accepts a single argument, being a user-passed string of alphabetical characters
   return str
     .toLowerCase()
     .split(" ")
