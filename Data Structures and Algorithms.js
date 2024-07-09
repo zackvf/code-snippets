@@ -432,7 +432,7 @@ function titleCase(str) { // create a new function that takes one argument, bein
 }
 // alternate version of title case function
 function titleCase(str) { // create a new function that accepts a single argument, being a user-passed string of alphabetical characters
-  return str
+  return str // return a copy of the mutated string...
     .toLowerCase()
     .split(" ")
     .map(val => val.replace(val.charAt(0), val.charAt(0).toUpperCase()))
