@@ -425,7 +425,7 @@ function isBool(value) { // create a new function that takes one argument, being
 function titleCase(str) { // create a new function that takes one argument, being a string of any length of characters
   const strArr = str.split(" "); // set up a new variable that contains the array of the words within the string
   let newTitle = []; // create a new variable to contain an empty array by default, which is to be used to contain the updated string
-  for (let letter in strArr) { // 
+  for (let letter in strArr) { // using a for loop, loop through each element in the array of the string's characters
     newTitle[letter] = strArr[letter][0].toUpperCase() + strArr[letter].slice(1).toLowerCase();
   }
   return newTitle.join(" ");
