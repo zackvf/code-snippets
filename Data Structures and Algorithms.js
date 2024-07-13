@@ -440,7 +440,7 @@ function titleCase(str) { // create a new function that accepts a single argumen
 }
 
 // copy each element of one array into a second array, in order, starting at a user-passed index of the second array (without mutating the original arrays)
-function arraySpicer(arr1, arr2, n) {
+function arraySpicer(arr1, arr2, n) { // create a new function that accepts three arguments, being the first array to copy from, the second array to copy into, and the element at which to start copying
   let newArr2 = arr2.slice();
   for (let i = 0; i < arr1.length; i++) {
       newArr2.splice(n, 0, arr1[i]);
