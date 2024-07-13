@@ -438,6 +438,7 @@ function titleCase(str) { // create a new function that accepts a single argumen
     .map(val => val.replace(val.charAt(0), val.charAt(0).toUpperCase())) //...and mapping the returned value of an anonymous function that accepts a value argument which leverages the .replace() method to look at the first character of each split word from the string and apply the .touppercase() method on each of them...
     .join(" "); //...and then joining each title-cased word within the string together with a space between each word
 }
+
 // copy each element of one array into a second array, in order, starting at a user-passed index of the second array (without mutating the original arrays)
 function arraySpicer(arr1, arr2, n) {
   let newArr2 = arr2.slice();
@@ -448,6 +449,7 @@ function arraySpicer(arr1, arr2, n) {
     }
   return newArr2;
 }
+
 // return an array that only contains truthy values from a user-passed array
 function truthyFinder(arr) {
   let newArr = [];
@@ -458,6 +460,7 @@ function truthyFinder(arr) {
   }
   return newArr;
 }
+
 // return the lowest index number a which a value should be inserted into an array after the array's been sorted
 function getIndexToIns(arr, num) {
   arr.sort((a, b) => a - b);
@@ -466,6 +469,7 @@ function getIndexToIns(arr, num) {
   }
   return arr.length;
 }
+
 // compare two string elements in an array and return true if the letters of the second string exist in the first, otherwise return false - procedurally
 function stringComparison(arr) {
   const firstElement = arr[0].toLowerCase(); // set the array's first element to a string with all lower case characters
