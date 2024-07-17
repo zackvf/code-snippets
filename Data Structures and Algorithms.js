@@ -444,7 +444,7 @@ function arraySpicer(arr1, arr2, n) { // create a new function that accepts thre
   let newArr2 = arr2.slice(); // create a new variable to contain a new, separate copy of the second array argument to insert elements into, as opposed to inserting elements directly into the second array argument itself
   for (let i = 0; i < arr1.length; i++) { // starting at the first element in the first array, from which elements will be copied into the second, iterate over each element until the length of the first array has been reached
       newArr2.splice(n, 0, arr1[i]); // on each loop iteration, splice in the next element from the first array into the next position in the copy of the second array...
-      n++; // 
+      n++; // ...and then increment the current position variable by 1 each loop to proceed through the rest of the array's elements
       // console.log(newArr2);
     }
   return newArr2;
