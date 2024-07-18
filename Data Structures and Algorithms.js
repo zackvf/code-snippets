@@ -446,7 +446,7 @@ function arraySpicer(arr1, arr2, n) { // create a new function that accepts thre
       newArr2.splice(n, 0, arr1[i]); // on each loop iteration, splice in the next element from the first array into the next position in the copy of the second array...
       n++; // ...and then increment the current position variable by 1 each loop to proceed through the rest of the array's elements
     }
-  return newArr2;
+  return newArr2; // after the loop reaches the final element of the first array, return the updated copy of the second array that would then also contain the spliced-in elements from the first array
 }
 
 // return an array that only contains truthy values from a user-passed array
