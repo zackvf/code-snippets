@@ -450,7 +450,7 @@ function arraySpicer(arr1, arr2, n) { // create a new function that accepts thre
 }
 
 // return an array that only contains truthy values from a user-passed array
-function truthyFinder(arr) { // create a new function that accepts one argument, 
+function truthyFinder(arr) { // create a new function that accepts one argument, being a user-passed array
   let newArr = [];
   for (let i = 0; i < arr.length; i++) {
     if (arr[i]) { // checks if the element at the array's index is true
