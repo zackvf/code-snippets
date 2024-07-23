@@ -453,7 +453,7 @@ function arraySpicer(arr1, arr2, n) { // create a new function that accepts thre
 function truthyFinder(arr) { // create a new function that accepts one argument, being a user-passed array
   let newArr = []; // create a new variable to contain the array of truthy/falsy results
   for (let i = 0; i < arr.length; i++) { // loop through all elements of the array, incrementing by one counter each loop iteration
-    if (arr[i]) { // checks if the element at the array's index is true
+    if (arr[i]) { // check if the element at the array's index is true
       newArr.push(arr[i]);
     }
   }
