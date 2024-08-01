@@ -457,7 +457,7 @@ function truthyFinder(arr) { // create a new function that accepts one argument,
       newArr.push(arr[i]); // ...and if so, push that next element onto the end of the new array
     }
   }
-  return newArr;
+  return newArr; // after the loop processes the final element of the user-passed array and completes, return the resulting array of truthy elements
 }
 
 // return the lowest index number a which a value should be inserted into an array after the array's been sorted
