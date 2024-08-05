@@ -460,8 +460,8 @@ function truthyFinder(arr) { // create a new function that accepts one argument,
   return newArr; // after the loop processes the final element of the user-passed array and completes, return the resulting array of truthy elements
 }
 
-// return the lowest index number a which a value should be inserted into an array after the array's been sorted
-function getIndexToIns(arr, num) { // create a new function
+// return the lowest index number at which a value should be inserted into an array after the array's been sorted
+function getIndexToIns(arr, num) { // create a new function that accepts two arguments, being a user-passed array and a user-passed number
   arr.sort((a, b) => a - b);
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] >= num) return i;
