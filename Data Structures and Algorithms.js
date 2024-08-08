@@ -464,7 +464,7 @@ function truthyFinder(arr) { // create a new function that accepts one argument,
 function getIndexToIns(arr, num) { // create a new function that accepts two arguments, being a user-passed array to insert an element into and a user-passed number to be inserted
   arr.sort((a, b) => a - b); // directly sort the elements of the user-passed array in ascending order, to begin before inserting the new element
   for (let i = 0; i < arr.length; i++) { // starting at the first element of the user-passed array, loop through each of the array elements until the final element is reached, incrementing by 1 each loop iteration...
-    if (arr[i] >= num) return i; // ...and if the array element at the current index
+    if (arr[i] >= num) return i; // ...and if the array element at the current index is greater than 
   }
   return arr.length;
 }
