@@ -466,7 +466,7 @@ function getIndexToIns(arr, num) { // create a new function that accepts two arg
   for (let i = 0; i < arr.length; i++) { // starting at the first element of the user-passed array, loop through each of the array elements until the final element is reached, incrementing by 1 each loop iteration...
     if (arr[i] >= num) return i; // ...and if the array element at the current index is greater than the user-passed number, return the current index
   }
-  return arr.length;
+  return arr.length; // after the loop completes, return the array's current length
 }
 
 // compare two string elements in an array and return true if the letters of the second string exist in the first, otherwise return false - procedurally
