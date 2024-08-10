@@ -475,7 +475,7 @@ function stringComparison(arr) {
   const secondElement = arr[1].toLowerCase(); // set the array's second element to a string with all lower case characters
   for (let i = 0; i < secondElement.length; i++) { // loop through the second string's characters
     if (firstElement.indexOf(secondElement[i]) < 0) { // if the first string doesn't contain the second string's given character at any index...
-      return false;
+      return false; // ...then return false and exit the if statement/loop
     }
   }
   return true;
