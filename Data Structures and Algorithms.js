@@ -478,7 +478,7 @@ function stringComparison(arr) {
       return false; // ...then return false and exit the if statement/loop
     }
   }
-  return true;
+  return true; // return true by default if no array is provided
 }
 // declaritively
 function stringComparison(arr) {
